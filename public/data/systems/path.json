@@ -1,0 +1,816 @@
+{
+  "system": {
+    "id": "path",
+    "name": "PATH",
+    "agency": "Port Authority",
+    "type": "subway",
+    "color": "#E66B00",
+    "enabled": false
+  },
+  "routes": [
+    {
+      "id": "path:ATW",
+      "systemId": "path",
+      "shortName": "ATW",
+      "longName": "Journal Square - 33rd Street via Hoboken",
+      "color": "#FF9900",
+      "textColor": "#000000",
+      "type": "subway",
+      "stationOrder": [
+        "path:781740",
+        "path:781739",
+        "path:781737",
+        "path:781735",
+        "path:781733",
+        "path:781744",
+        "path:781729",
+        "path:781727",
+        "path:781724"
+      ]
+    },
+    {
+      "id": "path:BLU",
+      "systemId": "path",
+      "shortName": "BLU",
+      "longName": "Hoboken - 33rd Street",
+      "color": "#4D92FB",
+      "textColor": "#000000",
+      "type": "subway",
+      "stationOrder": [
+        "path:781740",
+        "path:781739",
+        "path:781737",
+        "path:781735",
+        "path:781733",
+        "path:781743"
+      ]
+    },
+    {
+      "id": "path:GRE",
+      "systemId": "path",
+      "shortName": "GRE",
+      "longName": "Hoboken - World Trade Center",
+      "color": "#65C100",
+      "textColor": "#000000",
+      "type": "subway",
+      "stationOrder": [
+        "path:781744",
+        "path:781729",
+        "path:781730",
+        "path:781747"
+      ]
+    },
+    {
+      "id": "path:RED",
+      "systemId": "path",
+      "shortName": "RED",
+      "longName": "Newark - World Trade Center",
+      "color": "#D93A30",
+      "textColor": "#FFFFFF",
+      "type": "subway",
+      "stationOrder": [
+        "path:781718",
+        "path:781720",
+        "path:781722",
+        "path:781726",
+        "path:781730",
+        "path:781750"
+      ]
+    },
+    {
+      "id": "path:YEL",
+      "systemId": "path",
+      "shortName": "YEL",
+      "longName": "Journal Square - 33rd Street",
+      "color": "#FF9900",
+      "textColor": "#000000",
+      "type": "subway",
+      "stationOrder": [
+        "path:781740",
+        "path:781739",
+        "path:781737",
+        "path:781735",
+        "path:781733",
+        "path:781729",
+        "path:781727",
+        "path:781724"
+      ]
+    },
+    {
+      "id": "path:Special6",
+      "systemId": "path",
+      "shortName": "ATW",
+      "longName": "Journal Square - 33rd Street via Hoboken",
+      "color": "#FF9900",
+      "textColor": "#000000",
+      "type": "subway",
+      "stationOrder": [
+        "path:781740",
+        "path:781739",
+        "path:781737",
+        "path:781735",
+        "path:781733",
+        "path:781744",
+        "path:781729",
+        "path:781730",
+        "path:781727",
+        "path:781724"
+      ]
+    }
+  ],
+  "stations": [
+    {
+      "id": "path:781735",
+      "systemId": "path",
+      "name": "9th Street",
+      "latitude": 40.73424,
+      "longitude": -73.9991,
+      "routeIds": [
+        "path:ATW",
+        "path:YEL",
+        "path:BLU",
+        "path:Special6"
+      ],
+      "isTransferPoint": true
+    },
+    {
+      "id": "path:781734",
+      "systemId": "path",
+      "name": "9th Street",
+      "latitude": 40.73424,
+      "longitude": -73.9991,
+      "routeIds": [
+        "path:BLU",
+        "path:ATW",
+        "path:YEL"
+      ],
+      "isTransferPoint": true
+    },
+    {
+      "id": "path:781737",
+      "systemId": "path",
+      "name": "14th Street",
+      "latitude": 40.73735,
+      "longitude": -73.99684,
+      "routeIds": [
+        "path:ATW",
+        "path:YEL",
+        "path:BLU",
+        "path:Special6"
+      ],
+      "isTransferPoint": true
+    },
+    {
+      "id": "path:781736",
+      "systemId": "path",
+      "name": "14th Street",
+      "latitude": 40.73735,
+      "longitude": -73.99684,
+      "routeIds": [
+        "path:BLU",
+        "path:ATW",
+        "path:YEL"
+      ],
+      "isTransferPoint": true
+    },
+    {
+      "id": "path:781739",
+      "systemId": "path",
+      "name": "23rd Street",
+      "latitude": 40.7429,
+      "longitude": -73.99278,
+      "routeIds": [
+        "path:ATW",
+        "path:YEL",
+        "path:BLU",
+        "path:Special6"
+      ],
+      "isTransferPoint": true
+    },
+    {
+      "id": "path:781738",
+      "systemId": "path",
+      "name": "23rd Street",
+      "latitude": 40.7429,
+      "longitude": -73.99278,
+      "routeIds": [
+        "path:BLU",
+        "path:ATW",
+        "path:YEL"
+      ],
+      "isTransferPoint": true
+    },
+    {
+      "id": "path:26724",
+      "systemId": "path",
+      "name": "33rd Street",
+      "latitude": 40.74912,
+      "longitude": -73.98827,
+      "routeIds": [
+        "path:ATW"
+      ],
+      "isTransferPoint": false
+    },
+    {
+      "id": "path:781740",
+      "systemId": "path",
+      "name": "33rd Street",
+      "latitude": 40.74912,
+      "longitude": -73.98827,
+      "routeIds": [
+        "path:ATW",
+        "path:YEL",
+        "path:BLU",
+        "path:Special6"
+      ],
+      "isTransferPoint": true
+    },
+    {
+      "id": "path:781742",
+      "systemId": "path",
+      "name": "33rd Street",
+      "latitude": 40.74912,
+      "longitude": -73.98827,
+      "routeIds": [
+        "path:BLU"
+      ],
+      "isTransferPoint": false
+    },
+    {
+      "id": "path:781733",
+      "systemId": "path",
+      "name": "Christopher Street",
+      "latitude": 40.73295,
+      "longitude": -74.00707,
+      "routeIds": [
+        "path:ATW",
+        "path:YEL",
+        "path:BLU",
+        "path:Special6"
+      ],
+      "isTransferPoint": true
+    },
+    {
+      "id": "path:781732",
+      "systemId": "path",
+      "name": "Christopher Street",
+      "latitude": 40.73295,
+      "longitude": -74.00707,
+      "routeIds": [
+        "path:BLU",
+        "path:ATW",
+        "path:YEL"
+      ],
+      "isTransferPoint": true
+    },
+    {
+      "id": "path:781731",
+      "systemId": "path",
+      "name": "Exchange Place",
+      "latitude": 40.71676,
+      "longitude": -74.03238,
+      "routeIds": [
+        "path:GRE",
+        "path:RED"
+      ],
+      "isTransferPoint": true
+    },
+    {
+      "id": "path:781730",
+      "systemId": "path",
+      "name": "Exchange Place",
+      "latitude": 40.71676,
+      "longitude": -74.03238,
+      "routeIds": [
+        "path:GRE",
+        "path:RED",
+        "path:Special6"
+      ],
+      "isTransferPoint": true
+    },
+    {
+      "id": "path:781727",
+      "systemId": "path",
+      "name": "Grove Street",
+      "latitude": 40.71966,
+      "longitude": -74.04245,
+      "routeIds": [
+        "path:ATW",
+        "path:YEL",
+        "path:RED",
+        "path:Special6"
+      ],
+      "isTransferPoint": true
+    },
+    {
+      "id": "path:781726",
+      "systemId": "path",
+      "name": "Grove Street",
+      "latitude": 40.71966,
+      "longitude": -74.04245,
+      "routeIds": [
+        "path:ATW",
+        "path:YEL",
+        "path:RED"
+      ],
+      "isTransferPoint": true
+    },
+    {
+      "id": "path:781721",
+      "systemId": "path",
+      "name": "Harrison",
+      "latitude": 40.73942,
+      "longitude": -74.15587,
+      "routeIds": [
+        "path:RED"
+      ],
+      "isTransferPoint": false
+    },
+    {
+      "id": "path:781720",
+      "systemId": "path",
+      "name": "Harrison",
+      "latitude": 40.73942,
+      "longitude": -74.15587,
+      "routeIds": [
+        "path:RED"
+      ],
+      "isTransferPoint": false
+    },
+    {
+      "id": "path:781743",
+      "systemId": "path",
+      "name": "Hoboken",
+      "latitude": 40.73586,
+      "longitude": -74.02922,
+      "routeIds": [
+        "path:BLU",
+        "path:ATW"
+      ],
+      "isTransferPoint": true
+    },
+    {
+      "id": "path:781744",
+      "systemId": "path",
+      "name": "Hoboken",
+      "latitude": 40.73586,
+      "longitude": -74.02922,
+      "routeIds": [
+        "path:ATW",
+        "path:GRE",
+        "path:Special6"
+      ],
+      "isTransferPoint": true
+    },
+    {
+      "id": "path:781722",
+      "systemId": "path",
+      "name": "Journal Square",
+      "latitude": 40.73301,
+      "longitude": -74.06289,
+      "routeIds": [
+        "path:RED"
+      ],
+      "isTransferPoint": false
+    },
+    {
+      "id": "path:781723",
+      "systemId": "path",
+      "name": "Journal Square",
+      "latitude": 40.73301,
+      "longitude": -74.06289,
+      "routeIds": [
+        "path:ATW",
+        "path:YEL"
+      ],
+      "isTransferPoint": true
+    },
+    {
+      "id": "path:781724",
+      "systemId": "path",
+      "name": "Journal Square",
+      "latitude": 40.73301,
+      "longitude": -74.06289,
+      "routeIds": [
+        "path:ATW",
+        "path:YEL",
+        "path:Special6"
+      ],
+      "isTransferPoint": true
+    },
+    {
+      "id": "path:781725",
+      "systemId": "path",
+      "name": "Journal Square",
+      "latitude": 40.73301,
+      "longitude": -74.06289,
+      "routeIds": [
+        "path:RED"
+      ],
+      "isTransferPoint": false
+    },
+    {
+      "id": "path:781728",
+      "systemId": "path",
+      "name": "Newport",
+      "latitude": 40.72699,
+      "longitude": -74.03383,
+      "routeIds": [
+        "path:ATW",
+        "path:YEL",
+        "path:GRE"
+      ],
+      "isTransferPoint": true
+    },
+    {
+      "id": "path:781729",
+      "systemId": "path",
+      "name": "Newport",
+      "latitude": 40.72699,
+      "longitude": -74.03383,
+      "routeIds": [
+        "path:ATW",
+        "path:YEL",
+        "path:GRE",
+        "path:Special6"
+      ],
+      "isTransferPoint": true
+    },
+    {
+      "id": "path:781719",
+      "systemId": "path",
+      "name": "Newark",
+      "latitude": 40.73454,
+      "longitude": -74.16375,
+      "routeIds": [
+        "path:RED"
+      ],
+      "isTransferPoint": false
+    },
+    {
+      "id": "path:781718",
+      "systemId": "path",
+      "name": "Newark",
+      "latitude": 40.73454,
+      "longitude": -74.16375,
+      "routeIds": [
+        "path:RED"
+      ],
+      "isTransferPoint": false
+    },
+    {
+      "id": "path:26734",
+      "systemId": "path",
+      "name": "World Trade Center",
+      "latitude": 40.71271,
+      "longitude": -74.01193,
+      "routeIds": [
+        "path:RED"
+      ],
+      "isTransferPoint": false
+    },
+    {
+      "id": "path:781747",
+      "systemId": "path",
+      "name": "World Trade Center",
+      "latitude": 40.71271,
+      "longitude": -74.01193,
+      "routeIds": [
+        "path:GRE"
+      ],
+      "isTransferPoint": false
+    },
+    {
+      "id": "path:781750",
+      "systemId": "path",
+      "name": "World Trade Center",
+      "latitude": 40.71271,
+      "longitude": -74.01193,
+      "routeIds": [
+        "path:RED"
+      ],
+      "isTransferPoint": false
+    },
+    {
+      "id": "path:place_09S",
+      "systemId": "path",
+      "name": "9th Street",
+      "latitude": 40.73424,
+      "longitude": -73.9991,
+      "routeIds": [],
+      "isTransferPoint": false
+    },
+    {
+      "id": "path:place_14S",
+      "systemId": "path",
+      "name": "14th Street",
+      "latitude": 40.73735,
+      "longitude": -73.99684,
+      "routeIds": [],
+      "isTransferPoint": false
+    },
+    {
+      "id": "path:place_23S",
+      "systemId": "path",
+      "name": "23rd Street",
+      "latitude": 40.7429,
+      "longitude": -73.99278,
+      "routeIds": [],
+      "isTransferPoint": false
+    },
+    {
+      "id": "path:place_33S",
+      "systemId": "path",
+      "name": "33rd Street",
+      "latitude": 40.74912,
+      "longitude": -73.98827,
+      "routeIds": [],
+      "isTransferPoint": false
+    },
+    {
+      "id": "path:place_CHR",
+      "systemId": "path",
+      "name": "Christopher Street",
+      "latitude": 40.73295,
+      "longitude": -74.00707,
+      "routeIds": [],
+      "isTransferPoint": false
+    },
+    {
+      "id": "path:place_EXP",
+      "systemId": "path",
+      "name": "Exchange Place",
+      "latitude": 40.71676,
+      "longitude": -74.03238,
+      "routeIds": [],
+      "isTransferPoint": false
+    },
+    {
+      "id": "path:place_GRV",
+      "systemId": "path",
+      "name": "Grove Street",
+      "latitude": 40.71966,
+      "longitude": -74.04245,
+      "routeIds": [],
+      "isTransferPoint": false
+    },
+    {
+      "id": "path:place_HAR",
+      "systemId": "path",
+      "name": "Harrison",
+      "latitude": 40.73942,
+      "longitude": -74.15587,
+      "routeIds": [],
+      "isTransferPoint": false
+    },
+    {
+      "id": "path:place_HOB",
+      "systemId": "path",
+      "name": "Hoboken",
+      "latitude": 40.73586,
+      "longitude": -74.02922,
+      "routeIds": [],
+      "isTransferPoint": false
+    },
+    {
+      "id": "path:place_JSQ",
+      "systemId": "path",
+      "name": "Journal Square",
+      "latitude": 40.73301,
+      "longitude": -74.06289,
+      "routeIds": [],
+      "isTransferPoint": false
+    },
+    {
+      "id": "path:place_NEW",
+      "systemId": "path",
+      "name": "Newport",
+      "latitude": 40.72699,
+      "longitude": -74.03383,
+      "routeIds": [],
+      "isTransferPoint": false
+    },
+    {
+      "id": "path:place_NWK",
+      "systemId": "path",
+      "name": "Newark",
+      "latitude": 40.73454,
+      "longitude": -74.16375,
+      "routeIds": [],
+      "isTransferPoint": false
+    },
+    {
+      "id": "path:place_WTC",
+      "systemId": "path",
+      "name": "World Trade Center",
+      "latitude": 40.71271,
+      "longitude": -74.01193,
+      "routeIds": [],
+      "isTransferPoint": false
+    }
+  ],
+  "routeGeometries": [
+    {
+      "routeId": "path:ATW",
+      "coordinates": [
+        [
+          -73.98850811162231,
+          40.74925220951075
+        ],
+        [
+          -73.9930177674256,
+          40.7430325722605
+        ],
+        [
+          -73.99707757851152,
+          40.73748277071384
+        ],
+        [
+          -73.99921620915083,
+          40.734446899400304
+        ],
+        [
+          -74.00705420375465,
+          40.733174900163284
+        ],
+        [
+          -74.0292839393784,
+          40.73607983872986
+        ],
+        [
+          -74.03405780356694,
+          40.72713246274119
+        ],
+        [
+          -74.0423903380205,
+          40.719880542718855
+        ],
+        [
+          -74.06272916767026,
+          40.733198568404156
+        ]
+      ]
+    },
+    {
+      "routeId": "path:YEL",
+      "coordinates": [
+        [
+          -73.98803188837769,
+          40.748987790489245
+        ],
+        [
+          -73.9925422325744,
+          40.742767427739494
+        ],
+        [
+          -73.99660242148849,
+          40.73721722928616
+        ],
+        [
+          -73.99898379084917,
+          40.734033100599696
+        ],
+        [
+          -74.00700989759282,
+          40.73272952741707
+        ],
+        [
+          -74.0337265749042,
+          40.726779159165524
+        ],
+        [
+          -74.04250966197951,
+          40.71943945728114
+        ],
+        [
+          -74.06305083232974,
+          40.732821431595845
+        ]
+      ]
+    },
+    {
+      "routeId": "path:BLU",
+      "coordinates": [
+        [
+          -73.98836524464893,
+          40.7491728838043
+        ],
+        [
+          -73.99287510697023,
+          40.742953028904196
+        ],
+        [
+          -73.99693503140462,
+          40.737403108285534
+        ],
+        [
+          -73.99914648366034,
+          40.734322759760126
+        ],
+        [
+          -74.00706368150186,
+          40.73303996006531
+        ],
+        [
+          -74.02920467556864,
+          40.735949322538424
+        ]
+      ]
+    },
+    {
+      "routeId": "path:GRE",
+      "coordinates": [
+        [
+          -74.0292721950031,
+          40.735880773141545
+        ],
+        [
+          -74.03388803462786,
+          40.726997352531036
+        ],
+        [
+          -74.0324121292808,
+          40.716722267736515
+        ],
+        [
+          -74.01194142769769,
+          40.712665813156505
+        ]
+      ]
+    },
+    {
+      "routeId": "path:RED",
+      "coordinates": [
+        [
+          -74.16375,
+          40.73454
+        ],
+        [
+          -74.15587,
+          40.73942
+        ],
+        [
+          -74.06289,
+          40.73301
+        ],
+        [
+          -74.04245,
+          40.71966
+        ],
+        [
+          -74.03238,
+          40.71676
+        ],
+        [
+          -74.01193,
+          40.71271
+        ]
+      ]
+    },
+    {
+      "routeId": "path:Special6",
+      "coordinates": [
+        [
+          -73.98812713302661,
+          40.749040674293546
+        ],
+        [
+          -73.99263733954464,
+          40.7428204566437
+        ],
+        [
+          -73.9966974528931,
+          40.737270337571694
+        ],
+        [
+          -73.9990302745095,
+          40.734115860359815
+        ],
+        [
+          -74.00707947774721,
+          40.73281505990203
+        ],
+        [
+          -74.02918163637295,
+          40.73572809676209
+        ],
+        [
+          -74.03365589611639,
+          40.7269679424069
+        ],
+        [
+          -74.03226568194198,
+          40.71665705290965
+        ],
+        [
+          -74.04253295752967,
+          40.719540727423656
+        ],
+        [
+          -74.06298649939784,
+          40.73289685895751
+        ]
+      ]
+    }
+  ]
+}

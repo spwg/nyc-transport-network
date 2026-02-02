@@ -1,0 +1,2397 @@
+{
+  "system": {
+    "id": "nyc-ferry",
+    "name": "NYC Ferry",
+    "agency": "NYC Ferry",
+    "type": "ferry",
+    "color": "#F7931E",
+    "enabled": false
+  },
+  "routes": [
+    {
+      "id": "nyc-ferry:AS",
+      "systemId": "nyc-ferry",
+      "shortName": "AS",
+      "longName": "Astoria",
+      "color": "#0095DA",
+      "textColor": "#FFFFFF",
+      "type": "ferry",
+      "stationOrder": [
+        "nyc-ferry:87",
+        "nyc-ferry:120",
+        "nyc-ferry:17",
+        "nyc-ferry:90",
+        "nyc-ferry:25",
+        "nyc-ferry:89",
+        "nyc-ferry:113"
+      ]
+    },
+    {
+      "id": "nyc-ferry:ER",
+      "systemId": "nyc-ferry",
+      "shortName": "ER",
+      "longName": "East River",
+      "color": "#00B2A9",
+      "textColor": "#FFFFFF",
+      "type": "ferry",
+      "stationOrder": [
+        "nyc-ferry:87",
+        "nyc-ferry:20",
+        "nyc-ferry:8",
+        "nyc-ferry:19",
+        "nyc-ferry:18",
+        "nyc-ferry:4",
+        "nyc-ferry:17"
+      ]
+    },
+    {
+      "id": "nyc-ferry:RES",
+      "systemId": "nyc-ferry",
+      "shortName": "RES",
+      "longName": "Rockaway East",
+      "color": "#00A1E1",
+      "textColor": "#FFFFFF",
+      "type": "ferry",
+      "stationOrder": [
+        "nyc-ferry:62",
+        "nyc-ferry:61",
+        "nyc-ferry:37",
+        "nyc-ferry:103",
+        "nyc-ferry:105",
+        "nyc-ferry:39",
+        "nyc-ferry:104",
+        "nyc-ferry:142",
+        "nyc-ferry:16"
+      ]
+    },
+    {
+      "id": "nyc-ferry:RS",
+      "systemId": "nyc-ferry",
+      "shortName": "RS",
+      "longName": "Rockaway-Soundview",
+      "color": "#4E008E",
+      "textColor": "#FFFFFF",
+      "type": "ferry",
+      "stationOrder": [
+        "nyc-ferry:88",
+        "nyc-ferry:118",
+        "nyc-ferry:87",
+        "nyc-ferry:114",
+        "nyc-ferry:17",
+        "nyc-ferry:113",
+        "nyc-ferry:112",
+        "nyc-ferry:141"
+      ]
+    },
+    {
+      "id": "nyc-ferry:RW",
+      "systemId": "nyc-ferry",
+      "shortName": "RW",
+      "longName": "Rockaway",
+      "color": "#F15A29",
+      "textColor": "#FFFFFF",
+      "type": "ferry"
+    },
+    {
+      "id": "nyc-ferry:RWS",
+      "systemId": "nyc-ferry",
+      "shortName": "RWS",
+      "longName": "Rockaway West",
+      "color": "#00A1E1",
+      "textColor": "#FFFFFF",
+      "type": "ferry",
+      "stationOrder": [
+        "nyc-ferry:48",
+        "nyc-ferry:49",
+        "nyc-ferry:50",
+        "nyc-ferry:51",
+        "nyc-ferry:52",
+        "nyc-ferry:145",
+        "nyc-ferry:16"
+      ]
+    },
+    {
+      "id": "nyc-ferry:SB",
+      "systemId": "nyc-ferry",
+      "shortName": "SB",
+      "longName": "South Brooklyn",
+      "color": "#FCCC0A",
+      "textColor": "#000000",
+      "type": "ferry",
+      "stationOrder": [
+        "nyc-ferry:17",
+        "nyc-ferry:115",
+        "nyc-ferry:87",
+        "nyc-ferry:11",
+        "nyc-ferry:24",
+        "nyc-ferry:111"
+      ]
+    },
+    {
+      "id": "nyc-ferry:SG",
+      "systemId": "nyc-ferry",
+      "shortName": "SG",
+      "longName": "St. George",
+      "color": "#009B3A",
+      "textColor": "#FFFFFF",
+      "type": "ferry",
+      "stationOrder": [
+        "nyc-ferry:138",
+        "nyc-ferry:136",
+        "nyc-ferry:137",
+        "nyc-ferry:23",
+        "nyc-ferry:11",
+        "nyc-ferry:87"
+      ]
+    }
+  ],
+  "stations": [
+    {
+      "id": "nyc-ferry:4",
+      "systemId": "nyc-ferry",
+      "name": "Hunters Point South",
+      "latitude": 40.741838,
+      "longitude": -73.961322,
+      "routeIds": [
+        "nyc-ferry:ER"
+      ],
+      "isTransferPoint": false
+    },
+    {
+      "id": "nyc-ferry:8",
+      "systemId": "nyc-ferry",
+      "name": "South Williamsburg",
+      "latitude": 40.708743,
+      "longitude": -73.970224,
+      "routeIds": [
+        "nyc-ferry:ER"
+      ],
+      "isTransferPoint": false
+    },
+    {
+      "id": "nyc-ferry:11",
+      "systemId": "nyc-ferry",
+      "name": "Atlantic Ave/BBP Pier 6",
+      "latitude": 40.692315,
+      "longitude": -74.002073,
+      "routeIds": [
+        "nyc-ferry:SB",
+        "nyc-ferry:SG"
+      ],
+      "isTransferPoint": true
+    },
+    {
+      "id": "nyc-ferry:16",
+      "systemId": "nyc-ferry",
+      "name": "Beach Channel Dr/Beach 108th Street",
+      "latitude": 40.583846,
+      "longitude": -73.831658,
+      "routeIds": [
+        "nyc-ferry:RES",
+        "nyc-ferry:RWS"
+      ],
+      "isTransferPoint": true
+    },
+    {
+      "id": "nyc-ferry:17",
+      "systemId": "nyc-ferry",
+      "name": "East 34th Street",
+      "latitude": 40.743912,
+      "longitude": -73.970731,
+      "routeIds": [
+        "nyc-ferry:SB",
+        "nyc-ferry:ER",
+        "nyc-ferry:RS",
+        "nyc-ferry:AS"
+      ],
+      "isTransferPoint": true
+    },
+    {
+      "id": "nyc-ferry:18",
+      "systemId": "nyc-ferry",
+      "name": "Greenpoint",
+      "latitude": 40.731365,
+      "longitude": -73.963617,
+      "routeIds": [
+        "nyc-ferry:ER"
+      ],
+      "isTransferPoint": false
+    },
+    {
+      "id": "nyc-ferry:19",
+      "systemId": "nyc-ferry",
+      "name": "North Williamsburg",
+      "latitude": 40.720838,
+      "longitude": -73.964902,
+      "routeIds": [
+        "nyc-ferry:ER"
+      ],
+      "isTransferPoint": false
+    },
+    {
+      "id": "nyc-ferry:20",
+      "systemId": "nyc-ferry",
+      "name": "Dumbo/Fulton Ferry",
+      "latitude": 40.703652,
+      "longitude": -73.995671,
+      "routeIds": [
+        "nyc-ferry:ER"
+      ],
+      "isTransferPoint": false
+    },
+    {
+      "id": "nyc-ferry:23",
+      "systemId": "nyc-ferry",
+      "name": "Bay Ridge",
+      "latitude": 40.639858,
+      "longitude": -74.03813,
+      "routeIds": [
+        "nyc-ferry:SG"
+      ],
+      "isTransferPoint": false
+    },
+    {
+      "id": "nyc-ferry:24",
+      "systemId": "nyc-ferry",
+      "name": "Red Hook/Atlantic Basin",
+      "latitude": 40.680957,
+      "longitude": -74.013358,
+      "routeIds": [
+        "nyc-ferry:SB"
+      ],
+      "isTransferPoint": false
+    },
+    {
+      "id": "nyc-ferry:25",
+      "systemId": "nyc-ferry",
+      "name": "Roosevelt Island",
+      "latitude": 40.756811,
+      "longitude": -73.952482,
+      "routeIds": [
+        "nyc-ferry:AS"
+      ],
+      "isTransferPoint": false
+    },
+    {
+      "id": "nyc-ferry:37",
+      "systemId": "nyc-ferry",
+      "name": "Beach Channel Dr/Beach 54th Street",
+      "latitude": 40.59513,
+      "longitude": -73.78496,
+      "routeIds": [
+        "nyc-ferry:RES"
+      ],
+      "isTransferPoint": false
+    },
+    {
+      "id": "nyc-ferry:39",
+      "systemId": "nyc-ferry",
+      "name": "Rockaway Beach Boulevard & Beach 86th Street",
+      "latitude": 40.58763,
+      "longitude": -73.81118,
+      "routeIds": [
+        "nyc-ferry:RES"
+      ],
+      "isTransferPoint": false
+    },
+    {
+      "id": "nyc-ferry:43",
+      "systemId": "nyc-ferry",
+      "name": "Rockaway Beach Boulevard & Beach 86th Street",
+      "latitude": 40.587523,
+      "longitude": -73.811179,
+      "routeIds": [
+        "nyc-ferry:RES"
+      ],
+      "isTransferPoint": false
+    },
+    {
+      "id": "nyc-ferry:45",
+      "systemId": "nyc-ferry",
+      "name": "Beach Channel Dr/Beach 54th Street",
+      "latitude": 40.595027,
+      "longitude": -73.784696,
+      "routeIds": [
+        "nyc-ferry:RES"
+      ],
+      "isTransferPoint": false
+    },
+    {
+      "id": "nyc-ferry:46",
+      "systemId": "nyc-ferry",
+      "name": "Beach Channel Dr/Beach 41st Street",
+      "latitude": 40.595763,
+      "longitude": -73.772531,
+      "routeIds": [
+        "nyc-ferry:RES"
+      ],
+      "isTransferPoint": false
+    },
+    {
+      "id": "nyc-ferry:48",
+      "systemId": "nyc-ferry",
+      "name": "Rockaway Point Boulevard & Beach 169th Street",
+      "latitude": 40.567088,
+      "longitude": -73.882577,
+      "routeIds": [
+        "nyc-ferry:RWS"
+      ],
+      "isTransferPoint": false
+    },
+    {
+      "id": "nyc-ferry:49",
+      "systemId": "nyc-ferry",
+      "name": "Jacob Riis Park Road/Bath House",
+      "latitude": 40.566157,
+      "longitude": -73.872477,
+      "routeIds": [
+        "nyc-ferry:RWS"
+      ],
+      "isTransferPoint": false
+    },
+    {
+      "id": "nyc-ferry:50",
+      "systemId": "nyc-ferry",
+      "name": "Rockaway Beach Boulevard & Beach 149th Street",
+      "latitude": 40.569455,
+      "longitude": -73.863687,
+      "routeIds": [
+        "nyc-ferry:RWS"
+      ],
+      "isTransferPoint": false
+    },
+    {
+      "id": "nyc-ferry:51",
+      "systemId": "nyc-ferry",
+      "name": "Rockaway Beach Boulevard & Beach 135th Street",
+      "latitude": 40.573903,
+      "longitude": -73.852874,
+      "routeIds": [
+        "nyc-ferry:RWS"
+      ],
+      "isTransferPoint": false
+    },
+    {
+      "id": "nyc-ferry:52",
+      "systemId": "nyc-ferry",
+      "name": "Rockaway Beach Boulevard & Beach 127th Street",
+      "latitude": 40.576762,
+      "longitude": -73.8459,
+      "routeIds": [
+        "nyc-ferry:RWS"
+      ],
+      "isTransferPoint": false
+    },
+    {
+      "id": "nyc-ferry:55",
+      "systemId": "nyc-ferry",
+      "name": "Rockaway Beach Boulevard & Beach 118th Street",
+      "latitude": 40.579197,
+      "longitude": -73.839208,
+      "routeIds": [
+        "nyc-ferry:RWS"
+      ],
+      "isTransferPoint": false
+    },
+    {
+      "id": "nyc-ferry:56",
+      "systemId": "nyc-ferry",
+      "name": "Rockaway Beach Boulevard & Beach 127th Street",
+      "latitude": 40.576892,
+      "longitude": -73.845939,
+      "routeIds": [
+        "nyc-ferry:RWS"
+      ],
+      "isTransferPoint": false
+    },
+    {
+      "id": "nyc-ferry:57",
+      "systemId": "nyc-ferry",
+      "name": "Rockaway Beach Boulevard & Beach 135th Street",
+      "latitude": 40.574118,
+      "longitude": -73.85272,
+      "routeIds": [
+        "nyc-ferry:RWS"
+      ],
+      "isTransferPoint": false
+    },
+    {
+      "id": "nyc-ferry:58",
+      "systemId": "nyc-ferry",
+      "name": "Rockaway Beach Boulevard & Beach 149th Street",
+      "latitude": 40.569306,
+      "longitude": -73.864512,
+      "routeIds": [
+        "nyc-ferry:RWS"
+      ],
+      "isTransferPoint": false
+    },
+    {
+      "id": "nyc-ferry:61",
+      "systemId": "nyc-ferry",
+      "name": "Beach Channel Dr/Beach 41st Street",
+      "latitude": 40.595872,
+      "longitude": -73.772849,
+      "routeIds": [
+        "nyc-ferry:RES"
+      ],
+      "isTransferPoint": false
+    },
+    {
+      "id": "nyc-ferry:62",
+      "systemId": "nyc-ferry",
+      "name": "Beach Channel Dr/Beach 36th Street",
+      "latitude": 40.596245,
+      "longitude": -73.76914,
+      "routeIds": [
+        "nyc-ferry:RES"
+      ],
+      "isTransferPoint": false
+    },
+    {
+      "id": "nyc-ferry:87",
+      "systemId": "nyc-ferry",
+      "name": "Wall St/Pier 11",
+      "latitude": 40.703161,
+      "longitude": -74.006144,
+      "routeIds": [
+        "nyc-ferry:SB",
+        "nyc-ferry:ER",
+        "nyc-ferry:RS",
+        "nyc-ferry:AS",
+        "nyc-ferry:SG"
+      ],
+      "isTransferPoint": true
+    },
+    {
+      "id": "nyc-ferry:88",
+      "systemId": "nyc-ferry",
+      "name": "Rockaway",
+      "latitude": 40.584228,
+      "longitude": -73.831596,
+      "routeIds": [
+        "nyc-ferry:RS"
+      ],
+      "isTransferPoint": false
+    },
+    {
+      "id": "nyc-ferry:89",
+      "systemId": "nyc-ferry",
+      "name": "Astoria",
+      "latitude": 40.77172,
+      "longitude": -73.935714,
+      "routeIds": [
+        "nyc-ferry:AS"
+      ],
+      "isTransferPoint": false
+    },
+    {
+      "id": "nyc-ferry:90",
+      "systemId": "nyc-ferry",
+      "name": "Long Island City",
+      "latitude": 40.74842,
+      "longitude": -73.957725,
+      "routeIds": [
+        "nyc-ferry:AS"
+      ],
+      "isTransferPoint": false
+    },
+    {
+      "id": "nyc-ferry:103",
+      "systemId": "nyc-ferry",
+      "name": "Rockaway Beach Boulevard & Beach 67th Street",
+      "latitude": 40.590691,
+      "longitude": -73.79631,
+      "routeIds": [
+        "nyc-ferry:RES"
+      ],
+      "isTransferPoint": false
+    },
+    {
+      "id": "nyc-ferry:104",
+      "systemId": "nyc-ferry",
+      "name": "Rockaway Beach Boulevard & Beach 96th Street",
+      "latitude": 40.585406,
+      "longitude": -73.817963,
+      "routeIds": [
+        "nyc-ferry:RES"
+      ],
+      "isTransferPoint": false
+    },
+    {
+      "id": "nyc-ferry:105",
+      "systemId": "nyc-ferry",
+      "name": "Rockaway Beach Boulevard & Beach 77th Street",
+      "latitude": 40.588359,
+      "longitude": -73.804725,
+      "routeIds": [
+        "nyc-ferry:RES"
+      ],
+      "isTransferPoint": false
+    },
+    {
+      "id": "nyc-ferry:111",
+      "systemId": "nyc-ferry",
+      "name": "Gov. Island/Yankee Pier",
+      "latitude": 40.68664,
+      "longitude": -74.016482,
+      "routeIds": [
+        "nyc-ferry:SB"
+      ],
+      "isTransferPoint": false
+    },
+    {
+      "id": "nyc-ferry:112",
+      "systemId": "nyc-ferry",
+      "name": "Soundview",
+      "latitude": 40.804202,
+      "longitude": -73.848703,
+      "routeIds": [
+        "nyc-ferry:RS"
+      ],
+      "isTransferPoint": false
+    },
+    {
+      "id": "nyc-ferry:113",
+      "systemId": "nyc-ferry",
+      "name": "East 90th St",
+      "latitude": 40.777475,
+      "longitude": -73.942172,
+      "routeIds": [
+        "nyc-ferry:RS",
+        "nyc-ferry:AS"
+      ],
+      "isTransferPoint": true
+    },
+    {
+      "id": "nyc-ferry:114",
+      "systemId": "nyc-ferry",
+      "name": "Stuyvesant Cove",
+      "latitude": 40.731979,
+      "longitude": -73.972922,
+      "routeIds": [
+        "nyc-ferry:RS"
+      ],
+      "isTransferPoint": false
+    },
+    {
+      "id": "nyc-ferry:115",
+      "systemId": "nyc-ferry",
+      "name": "Corlears Hook",
+      "latitude": 40.710159,
+      "longitude": -73.979244,
+      "routeIds": [
+        "nyc-ferry:SB"
+      ],
+      "isTransferPoint": false
+    },
+    {
+      "id": "nyc-ferry:118",
+      "systemId": "nyc-ferry",
+      "name": "Sunset Park/BAT",
+      "latitude": 40.646276,
+      "longitude": -74.026436,
+      "routeIds": [
+        "nyc-ferry:RS"
+      ],
+      "isTransferPoint": false
+    },
+    {
+      "id": "nyc-ferry:120",
+      "systemId": "nyc-ferry",
+      "name": "Brooklyn Navy Yard",
+      "latitude": 40.701792,
+      "longitude": -73.973576,
+      "routeIds": [
+        "nyc-ferry:AS"
+      ],
+      "isTransferPoint": false
+    },
+    {
+      "id": "nyc-ferry:136",
+      "systemId": "nyc-ferry",
+      "name": "Battery Park City/Vesey St.",
+      "latitude": 40.715029,
+      "longitude": -74.017775,
+      "routeIds": [
+        "nyc-ferry:SG"
+      ],
+      "isTransferPoint": false
+    },
+    {
+      "id": "nyc-ferry:137",
+      "systemId": "nyc-ferry",
+      "name": "St. George",
+      "latitude": 40.646072,
+      "longitude": -74.074231,
+      "routeIds": [
+        "nyc-ferry:SG"
+      ],
+      "isTransferPoint": false
+    },
+    {
+      "id": "nyc-ferry:138",
+      "systemId": "nyc-ferry",
+      "name": "Midtown West/W 39th St-Pier 79",
+      "latitude": 40.760323,
+      "longitude": -74.004075,
+      "routeIds": [
+        "nyc-ferry:SG"
+      ],
+      "isTransferPoint": false
+    },
+    {
+      "id": "nyc-ferry:141",
+      "systemId": "nyc-ferry",
+      "name": "Ferry Point Park",
+      "latitude": 40.805455,
+      "longitude": -73.837305,
+      "routeIds": [
+        "nyc-ferry:RS"
+      ],
+      "isTransferPoint": false
+    },
+    {
+      "id": "nyc-ferry:142",
+      "systemId": "nyc-ferry",
+      "name": "Rockaway Beach Boulevard & Beach 102nd Street",
+      "latitude": 40.58383,
+      "longitude": -73.82362,
+      "routeIds": [
+        "nyc-ferry:RES"
+      ],
+      "isTransferPoint": false
+    },
+    {
+      "id": "nyc-ferry:145",
+      "systemId": "nyc-ferry",
+      "name": "Rockaway Beach Boulevard & Beach 118th Street",
+      "latitude": 40.579155,
+      "longitude": -73.839088,
+      "routeIds": [
+        "nyc-ferry:RWS"
+      ],
+      "isTransferPoint": false
+    },
+    {
+      "id": "nyc-ferry:149",
+      "systemId": "nyc-ferry",
+      "name": "Rockaway Beach Boulevard & Beach 96th Street",
+      "latitude": 40.585465,
+      "longitude": -73.81766,
+      "routeIds": [
+        "nyc-ferry:RES"
+      ],
+      "isTransferPoint": false
+    },
+    {
+      "id": "nyc-ferry:150",
+      "systemId": "nyc-ferry",
+      "name": "Rockaway Beach Boulevard & Beach 79th Street",
+      "latitude": 40.588152,
+      "longitude": -73.805308,
+      "routeIds": [
+        "nyc-ferry:RES"
+      ],
+      "isTransferPoint": false
+    },
+    {
+      "id": "nyc-ferry:151",
+      "systemId": "nyc-ferry",
+      "name": "Rockaway Beach Boulevard & Beach 67th Street",
+      "latitude": 40.590786,
+      "longitude": -73.795489,
+      "routeIds": [
+        "nyc-ferry:RES"
+      ],
+      "isTransferPoint": false
+    }
+  ],
+  "routeGeometries": [
+    {
+      "routeId": "nyc-ferry:SB",
+      "coordinates": [
+        [
+          -73.97069655695807,
+          40.743998596832405
+        ],
+        [
+          -73.96720945085654,
+          40.74293967482379
+        ],
+        [
+          -73.96969856148775,
+          40.72148162571574
+        ],
+        [
+          -73.97363652515304,
+          40.71029931259009
+        ],
+        [
+          -73.97903486036371,
+          40.70897796569829
+        ],
+        [
+          -73.979241,
+          40.710159
+        ],
+        [
+          -73.97900528262156,
+          40.70898168909768
+        ],
+        [
+          -74.00522994382752,
+          40.70228897683681
+        ],
+        [
+          -74.006138,
+          40.703161
+        ],
+        [
+          -74.00513774467372,
+          40.70238434572194
+        ],
+        [
+          -74.00521584754594,
+          40.69328721063819
+        ],
+        [
+          -74.002067,
+          40.692315
+        ],
+        [
+          -74.00527144237638,
+          40.693181003306464
+        ],
+        [
+          -74.01461765983726,
+          40.68533356366409
+        ],
+        [
+          -74.01120138933595,
+          40.682729077318534
+        ],
+        [
+          -74.01349120477508,
+          40.68093480446992
+        ],
+        [
+          -74.01141603018773,
+          40.682683927805144
+        ],
+        [
+          -74.01649724213652,
+          40.68663289542541
+        ]
+      ]
+    },
+    {
+      "routeId": "nyc-ferry:ER",
+      "coordinates": [
+        [
+          -73.96130855718722,
+          40.741927606653114
+        ],
+        [
+          -73.96449624956577,
+          40.742222522259596
+        ],
+        [
+          -73.96729502696587,
+          40.7430225121945
+        ],
+        [
+          -73.97069695695807,
+          40.743998496832404
+        ]
+      ]
+    },
+    {
+      "routeId": "nyc-ferry:ER",
+      "coordinates": [
+        [
+          -74.006771000213,
+          40.70357955695563
+        ],
+        [
+          -74.00525301241848,
+          40.702287026663235
+        ],
+        [
+          -73.9966304919604,
+          40.70406969604589
+        ],
+        [
+          -73.995671,
+          40.703652
+        ],
+        [
+          -73.99661427191715,
+          40.70407224796759
+        ],
+        [
+          -73.97255988961301,
+          40.71003023587955
+        ],
+        [
+          -73.970224,
+          40.708743
+        ],
+        [
+          -73.97246509487536,
+          40.71009966319709
+        ],
+        [
+          -73.96721235777076,
+          40.721959538648576
+        ],
+        [
+          -73.964902,
+          40.720838
+        ],
+        [
+          -73.96719035483726,
+          40.722011488520224
+        ],
+        [
+          -73.96473256608363,
+          40.731372929481836
+        ],
+        [
+          -73.963617,
+          40.731365
+        ],
+        [
+          -73.96472476346239,
+          40.73141351951952
+        ],
+        [
+          -73.96440752773029,
+          40.74210519698995
+        ],
+        [
+          -73.961322,
+          40.741838
+        ],
+        [
+          -73.96449784615862,
+          40.74222262178274
+        ],
+        [
+          -73.96729662696588,
+          40.7430226121945
+        ],
+        [
+          -73.97069855695807,
+          40.743998596832405
+        ]
+      ]
+    },
+    {
+      "routeId": "nyc-ferry:RS",
+      "coordinates": [
+        [
+          -73.8372911,
+          40.8054549
+        ],
+        [
+          -73.8377811,
+          40.8041479
+        ],
+        [
+          -73.8479152,
+          40.8027329
+        ],
+        [
+          -73.8486892,
+          40.8042019
+        ],
+        [
+          -73.8479152,
+          40.8027329
+        ],
+        [
+          -73.8725812,
+          40.7976659
+        ],
+        [
+          -73.8839622,
+          40.7995369
+        ],
+        [
+          -73.8906932,
+          40.8004039
+        ],
+        [
+          -73.9005282,
+          40.7975779
+        ],
+        [
+          -73.9111903,
+          40.7927809
+        ],
+        [
+          -73.9267263,
+          40.7797679
+        ],
+        [
+          -73.9396953,
+          40.7778449
+        ],
+        [
+          -73.9421583,
+          40.7774749
+        ],
+        [
+          -73.9396953,
+          40.7778449
+        ],
+        [
+          -73.9562633,
+          40.7580669
+        ],
+        [
+          -73.9685054,
+          40.7432779
+        ],
+        [
+          -73.9707174,
+          40.7439119
+        ],
+        [
+          -73.9685054,
+          40.7432779
+        ],
+        [
+          -73.9700764,
+          40.7318049
+        ],
+        [
+          -73.9729084,
+          40.7319789
+        ],
+        [
+          -73.9700764,
+          40.7318049
+        ],
+        [
+          -73.9697994,
+          40.7214929
+        ],
+        [
+          -73.9729204,
+          40.7123569
+        ],
+        [
+          -73.9754444,
+          40.7101419
+        ],
+        [
+          -73.9806734,
+          40.7080999
+        ],
+        [
+          -73.9908364,
+          40.7073889
+        ],
+        [
+          -74.0052534,
+          40.7023769
+        ],
+        [
+          -74.0061374,
+          40.7031599
+        ],
+        [
+          -74.0052534,
+          40.7023769
+        ],
+        [
+          -74.0041794,
+          40.7002299
+        ],
+        [
+          -74.0103544,
+          40.6901529
+        ],
+        [
+          -74.0214675,
+          40.6783339
+        ],
+        [
+          -74.0240925,
+          40.6599409
+        ],
+        [
+          -74.0329195,
+          40.6490319
+        ],
+        [
+          -74.0264295,
+          40.6462759
+        ],
+        [
+          -74.0329195,
+          40.6490319
+        ],
+        [
+          -74.0398115,
+          40.6407939
+        ],
+        [
+          -74.0420145,
+          40.6379769
+        ],
+        [
+          -74.0443845,
+          40.6276169
+        ],
+        [
+          -74.0444565,
+          40.6235679
+        ],
+        [
+          -74.0445355,
+          40.6216879
+        ],
+        [
+          -74.0419225,
+          40.6121729
+        ],
+        [
+          -74.0389215,
+          40.6051629
+        ],
+        [
+          -74.0142804,
+          40.5709759
+        ],
+        [
+          -74.0045534,
+          40.5655639
+        ],
+        [
+          -73.9304373,
+          40.5647309
+        ],
+        [
+          -73.8675432,
+          40.5779429
+        ],
+        [
+          -73.8538942,
+          40.5838039
+        ],
+        [
+          -73.8319091,
+          40.5850129
+        ],
+        [
+          -73.8315891,
+          40.5842279
+        ]
+      ]
+    },
+    {
+      "routeId": "nyc-ferry:RS",
+      "coordinates": [
+        [
+          -73.837299,
+          40.805455
+        ],
+        [
+          -73.837789,
+          40.804148
+        ],
+        [
+          -73.847923,
+          40.802733
+        ],
+        [
+          -73.848697,
+          40.804202
+        ],
+        [
+          -73.847923,
+          40.802733
+        ],
+        [
+          -73.872589,
+          40.797666
+        ],
+        [
+          -73.88397,
+          40.799537
+        ],
+        [
+          -73.890701,
+          40.800404
+        ],
+        [
+          -73.900536,
+          40.797578
+        ],
+        [
+          -73.911198,
+          40.792781
+        ],
+        [
+          -73.926734,
+          40.779768
+        ],
+        [
+          -73.939703,
+          40.777845
+        ],
+        [
+          -73.942166,
+          40.777475
+        ],
+        [
+          -73.939703,
+          40.777845
+        ],
+        [
+          -73.956271,
+          40.758067
+        ],
+        [
+          -73.968513,
+          40.743278
+        ],
+        [
+          -73.970725,
+          40.743912
+        ],
+        [
+          -73.968513,
+          40.743278
+        ],
+        [
+          -73.970084,
+          40.731805
+        ],
+        [
+          -73.972916,
+          40.731979
+        ],
+        [
+          -73.970084,
+          40.731805
+        ],
+        [
+          -73.969807,
+          40.721493
+        ],
+        [
+          -73.972928,
+          40.712357
+        ],
+        [
+          -73.975452,
+          40.710142
+        ],
+        [
+          -73.980681,
+          40.7081
+        ],
+        [
+          -73.990844,
+          40.707389
+        ],
+        [
+          -74.005257,
+          40.702377
+        ],
+        [
+          -74.006687,
+          40.703647
+        ]
+      ]
+    },
+    {
+      "routeId": "nyc-ferry:AS",
+      "coordinates": [
+        [
+          -74.00684512241853,
+          40.70351219670296
+        ],
+        [
+          -74.00520249845955,
+          40.70220172007371
+        ],
+        [
+          -73.99073782253058,
+          40.70725820739004
+        ],
+        [
+          -73.9766013529787,
+          40.70692979925926
+        ],
+        [
+          -73.973574,
+          40.701792
+        ],
+        [
+          -73.97629277649095,
+          40.70710541380022
+        ],
+        [
+          -73.97356582286292,
+          40.71008173484258
+        ],
+        [
+          -73.9695771372132,
+          40.72145019600521
+        ],
+        [
+          -73.9670909040392,
+          40.742943393150746
+        ],
+        [
+          -73.970729,
+          40.743912
+        ],
+        [
+          -73.96722250597989,
+          40.742774185323036
+        ],
+        [
+          -73.9590273164236,
+          40.74942953573598
+        ],
+        [
+          -73.957723,
+          40.74842
+        ],
+        [
+          -73.95896126553602,
+          40.749472492336864
+        ],
+        [
+          -73.95109804267612,
+          40.75625183915142
+        ],
+        [
+          -73.95248,
+          40.756811
+        ],
+        [
+          -73.95110424865778,
+          40.756246879857535
+        ],
+        [
+          -73.9383217725504,
+          40.7707387183217
+        ],
+        [
+          -73.935712,
+          40.77172
+        ],
+        [
+          -73.93828986266563,
+          40.770965364969484
+        ],
+        [
+          -73.93949747310991,
+          40.77793271952721
+        ],
+        [
+          -73.94220489902368,
+          40.77765318726001
+        ]
+      ]
+    },
+    {
+      "routeId": "nyc-ferry:SG",
+      "coordinates": [
+        [
+          -74.004127551404,
+          40.7601544526619
+        ],
+        [
+          -74.00641261704068,
+          40.761192879830084
+        ],
+        [
+          -74.01342183855344,
+          40.751209426408174
+        ],
+        [
+          -74.02365519626937,
+          40.715385752230056
+        ],
+        [
+          -74.017741,
+          40.715028
+        ],
+        [
+          -74.02368309821586,
+          40.71531879754431
+        ],
+        [
+          -74.02875298963237,
+          40.69465513621685
+        ],
+        [
+          -74.03914382270825,
+          40.675971903658855
+        ],
+        [
+          -74.06018774652978,
+          40.651518786945154
+        ],
+        [
+          -74.06711272058354,
+          40.6487427277106
+        ],
+        [
+          -74.074221,
+          40.6460712
+        ],
+        [
+          -74.06712096056073,
+          40.64907947311773
+        ],
+        [
+          -74.05541483326232,
+          40.63951518813086
+        ],
+        [
+          -74.04203204714673,
+          40.638158123089674
+        ],
+        [
+          -74.03991084586701,
+          40.640955942338124
+        ],
+        [
+          -74.038123,
+          40.6398566
+        ],
+        [
+          -74.04000137484299,
+          40.640896901297225
+        ],
+        [
+          -74.02430082373388,
+          40.66001993215706
+        ],
+        [
+          -74.02158235305069,
+          40.67853218312335
+        ],
+        [
+          -74.01467243675367,
+          40.685648508997104
+        ],
+        [
+          -74.0054226153732,
+          40.69341720264723
+        ],
+        [
+          -74.002042,
+          40.692314
+        ],
+        [
+          -74.00553431132604,
+          40.69320459423764
+        ],
+        [
+          -74.00546232049824,
+          40.70235271181913
+        ],
+        [
+          -74.006820008293,
+          40.70351211924681
+        ]
+      ]
+    },
+    {
+      "routeId": "nyc-ferry:RES",
+      "coordinates": [
+        [
+          -73.83134051754845,
+          40.58392865166056
+        ],
+        [
+          -73.83342658364538,
+          40.58339743557895
+        ],
+        [
+          -73.83471394589618,
+          40.58299678204661
+        ],
+        [
+          -73.83432084201681,
+          40.582404753013755
+        ],
+        [
+          -73.83409898886633,
+          40.582126691213865
+        ],
+        [
+          -73.83388149998989,
+          40.58198359498396
+        ],
+        [
+          -73.83361977748972,
+          40.58186382599675
+        ],
+        [
+          -73.83328271656673,
+          40.58180634421845
+        ],
+        [
+          -73.83307179015016,
+          40.581791986752506
+        ],
+        [
+          -73.83286285395604,
+          40.5818220942394
+        ],
+        [
+          -73.83124938026388,
+          40.582208368343046
+        ],
+        [
+          -73.8302719842234,
+          40.58249444091248
+        ],
+        [
+          -73.82990789503546,
+          40.58185162156443
+        ],
+        [
+          -73.82960640332726,
+          40.58187469187603
+        ],
+        [
+          -73.82950619566935,
+          40.58190383211845
+        ],
+        [
+          -73.82760445981957,
+          40.582470772335704
+        ],
+        [
+          -73.8260185771931,
+          40.582925746101665
+        ],
+        [
+          -73.82510718793402,
+          40.58319683388466
+        ],
+        [
+          -73.82408060402393,
+          40.583503740133196
+        ],
+        [
+          -73.8236542747974,
+          40.58361859434817
+        ],
+        [
+          -73.82298138426938,
+          40.58380900310166
+        ],
+        [
+          -73.82296165881982,
+          40.583801596683934
+        ],
+        [
+          -73.82252230569587,
+          40.58313995164174
+        ],
+        [
+          -73.82168253587012,
+          40.58352939429492
+        ],
+        [
+          -73.82119578824494,
+          40.58376230205281
+        ],
+        [
+          -73.82107794734291,
+          40.58381624448131
+        ],
+        [
+          -73.82030773665967,
+          40.584180320815385
+        ],
+        [
+          -73.8195428214279,
+          40.584546290008355
+        ],
+        [
+          -73.81877293970665,
+          40.584907247234405
+        ],
+        [
+          -73.81801373189005,
+          40.58526632255256
+        ],
+        [
+          -73.81755900543094,
+          40.58548459186768
+        ],
+        [
+          -73.81726784360534,
+          40.58563365314957
+        ],
+        [
+          -73.81713897502979,
+          40.585693234507985
+        ],
+        [
+          -73.81668367130841,
+          40.585908344652466
+        ],
+        [
+          -73.81655230448872,
+          40.585973442678686
+        ],
+        [
+          -73.81587401254276,
+          40.586247220060265
+        ],
+        [
+          -73.81541897667731,
+          40.58643023113893
+        ],
+        [
+          -73.81518338951265,
+          40.58652610488253
+        ],
+        [
+          -73.81461948378815,
+          40.58674607643817
+        ],
+        [
+          -73.81378285284846,
+          40.587076679402976
+        ],
+        [
+          -73.81303663081657,
+          40.58732413376766
+        ],
+        [
+          -73.81247285239456,
+          40.58738320162567
+        ],
+        [
+          -73.81215891555642,
+          40.58741619656941
+        ],
+        [
+          -73.81127043702503,
+          40.587508236193116
+        ],
+        [
+          -73.811007553972,
+          40.587545421695744
+        ],
+        [
+          -73.810627547284,
+          40.58760142243909
+        ],
+        [
+          -73.80985229628087,
+          40.587713248424826
+        ],
+        [
+          -73.80874748829139,
+          40.587817153127624
+        ],
+        [
+          -73.80727151237883,
+          40.587956151395495
+        ],
+        [
+          -73.80633514413077,
+          40.58804317871246
+        ],
+        [
+          -73.80513105648892,
+          40.58817026987035
+        ],
+        [
+          -73.80431200425386,
+          40.58828361006599
+        ],
+        [
+          -73.80353636250237,
+          40.588445006764985
+        ],
+        [
+          -73.80277545324637,
+          40.58862135404121
+        ],
+        [
+          -73.80200188706092,
+          40.58883646699624
+        ],
+        [
+          -73.80156173838171,
+          40.58894411462543
+        ],
+        [
+          -73.80115769809744,
+          40.58903195102042
+        ],
+        [
+          -73.80106974968938,
+          40.58905095536278
+        ],
+        [
+          -73.80092087897287,
+          40.58903327213152
+        ],
+        [
+          -73.80012969682998,
+          40.58928119101168
+        ],
+        [
+          -73.79928533055028,
+          40.589568283863684
+        ],
+        [
+          -73.7984019250542,
+          40.58985938904633
+        ],
+        [
+          -73.7978411943152,
+          40.59006331892113
+        ],
+        [
+          -73.79684777061567,
+          40.59038393048544
+        ],
+        [
+          -73.79591787603154,
+          40.59065268022214
+        ],
+        [
+          -73.79581544630366,
+          40.59067835539844
+        ],
+        [
+          -73.7939575407031,
+          40.591153337003355
+        ],
+        [
+          -73.79309835853502,
+          40.59136737261583
+        ],
+        [
+          -73.79224161085733,
+          40.591594323415315
+        ],
+        [
+          -73.79145417646971,
+          40.59178221642492
+        ],
+        [
+          -73.79131617820019,
+          40.591850654572696
+        ],
+        [
+          -73.79139962870336,
+          40.59312442517574
+        ],
+        [
+          -73.7911905254969,
+          40.593146988433496
+        ],
+        [
+          -73.79098583919574,
+          40.59322827380099
+        ],
+        [
+          -73.78909577076486,
+          40.59399829515119
+        ],
+        [
+          -73.78804590635988,
+          40.594428252920586
+        ],
+        [
+          -73.7871971048376,
+          40.59476789263151
+        ],
+        [
+          -73.7870541976157,
+          40.59480621251313
+        ],
+        [
+          -73.78692158229836,
+          40.59483522384337
+        ],
+        [
+          -73.7862431550689,
+          40.59489510800326
+        ],
+        [
+          -73.78571330910458,
+          40.59493509841088
+        ],
+        [
+          -73.78549352645273,
+          40.594955085406205
+        ],
+        [
+          -73.78453374857291,
+          40.59502507275694
+        ],
+        [
+          -73.78411363162009,
+          40.59505507933643
+        ],
+        [
+          -73.78359389648776,
+          40.59509506469261
+        ],
+        [
+          -73.7826840210979,
+          40.59515505812153
+        ],
+        [
+          -73.78182404334987,
+          40.595215056969536
+        ],
+        [
+          -73.7809042908764,
+          40.59527504459247
+        ],
+        [
+          -73.78044740529039,
+          40.59530203914263
+        ],
+        [
+          -73.7799237828102,
+          40.59533507086479
+        ],
+        [
+          -73.77901390598453,
+          40.59540506418465
+        ],
+        [
+          -73.7782044198488,
+          40.59545503846147
+        ],
+        [
+          -73.77737413377425,
+          40.59550505235499
+        ],
+        [
+          -73.77653378402977,
+          40.595565070797676
+        ],
+        [
+          -73.77570404334986,
+          40.59562505696953
+        ],
+        [
+          -73.77475488102039,
+          40.59568501831939
+        ],
+        [
+          -73.77457604030411,
+          40.595684979959145
+        ],
+        [
+          -73.77385667099404,
+          40.595714966453
+        ],
+        [
+          -73.7728068689874,
+          40.59572496328198
+        ],
+        [
+          -73.77229179593753,
+          40.59574520618988
+        ],
+        [
+          -73.77148061731015,
+          40.59586531113086
+        ],
+        [
+          -73.77058338372407,
+          40.59598327069025
+        ],
+        [
+          -73.77085420120036,
+          40.59734178351609
+        ],
+        [
+          -73.76998160431816,
+          40.59742522199587
+        ],
+        [
+          -73.76902942978771,
+          40.597538022697094
+        ],
+        [
+          -73.76877584353218,
+          40.59620181191197
+        ],
+        [
+          -73.76874312584322,
+          40.5962679341083
+        ],
+        [
+          -73.76910854494811,
+          40.59622776535457
+        ],
+        [
+          -73.76913977433648,
+          40.59622364990543
+        ]
+      ]
+    },
+    {
+      "routeId": "nyc-ferry:RWS",
+      "coordinates": [
+        [
+          -73.83131094601075,
+          40.583843455020634
+        ],
+        [
+          -73.83341388356644,
+          40.58328667857798
+        ],
+        [
+          -73.8345620428439,
+          40.582917105166295
+        ],
+        [
+          -73.83550239176033,
+          40.582617020428486
+        ],
+        [
+          -73.83609260683953,
+          40.58243696910402
+        ],
+        [
+          -73.83634194101295,
+          40.58235713024244
+        ],
+        [
+          -73.83671187873448,
+          40.582237145655846
+        ],
+        [
+          -73.83739186795565,
+          40.58201714832946
+        ],
+        [
+          -73.83742845441216,
+          40.582005005406394
+        ],
+        [
+          -73.83787364364255,
+          40.58186673133944
+        ],
+        [
+          -73.83811413941615,
+          40.58180662324236
+        ],
+        [
+          -73.83833571696266,
+          40.58178735366933
+        ],
+        [
+          -73.83721168797938,
+          40.579795927435725
+        ],
+        [
+          -73.8380713983667,
+          40.57946726651811
+        ],
+        [
+          -73.8389013983667,
+          40.57919726651811
+        ],
+        [
+          -73.83972129637804,
+          40.5789172926306
+        ],
+        [
+          -73.84054129637803,
+          40.5786472926306
+        ],
+        [
+          -73.8413613983667,
+          40.57836726651811
+        ],
+        [
+          -73.84219220606879,
+          40.57809706529771
+        ],
+        [
+          -73.84303149930997,
+          40.57783724082944
+        ],
+        [
+          -73.84385068839853,
+          40.57754745160039
+        ],
+        [
+          -73.84466938272438,
+          40.57726781238313
+        ],
+        [
+          -73.84547911372267,
+          40.57693789004666
+        ],
+        [
+          -73.8459693983667,
+          40.57677426651811
+        ],
+        [
+          -73.8463485422239,
+          40.57664805887928
+        ],
+        [
+          -73.84715746970454,
+          40.576308389994885
+        ],
+        [
+          -73.84798770194556,
+          40.57596831670003
+        ],
+        [
+          -73.84881780606545,
+          40.57562828412794
+        ],
+        [
+          -73.84960737556561,
+          40.57530841995842
+        ],
+        [
+          -73.85037774081462,
+          40.57497830451971
+        ],
+        [
+          -73.8511980953996,
+          40.57465819454643
+        ],
+        [
+          -73.85199749852647,
+          40.57432838085042
+        ],
+        [
+          -73.85276762027081,
+          40.57400834237519
+        ],
+        [
+          -73.85357786017371,
+          40.573678267271305
+        ],
+        [
+          -73.8543676202708,
+          40.57335834237519
+        ],
+        [
+          -73.85515732678893,
+          40.573028435541254
+        ],
+        [
+          -73.85594774081463,
+          40.57269830451971
+        ],
+        [
+          -73.85674827061624,
+          40.57237814096048
+        ],
+        [
+          -73.85755815348962,
+          40.57205817672563
+        ],
+        [
+          -73.85834794237313,
+          40.57173824175496
+        ],
+        [
+          -73.85844790797073,
+          40.5716982524207
+        ],
+        [
+          -73.85850056876924,
+          40.571676358621566
+        ],
+        [
+          -73.85924744837226,
+          40.571368396771916
+        ],
+        [
+          -73.86003732678893,
+          40.571038435541254
+        ],
+        [
+          -73.86082774081463,
+          40.570708304519705
+        ],
+        [
+          -73.86162803519606,
+          40.5703882130736
+        ],
+        [
+          -73.86241815348963,
+          40.570068176725634
+        ],
+        [
+          -73.86252741890772,
+          40.570028406144836
+        ],
+        [
+          -73.86330720400363,
+          40.56969847494245
+        ],
+        [
+          -73.86409899191375,
+          40.56936792559302
+        ],
+        [
+          -73.86467261942806,
+          40.56917696612144
+        ],
+        [
+          -73.86507723938483,
+          40.56906602760991
+        ],
+        [
+          -73.86549190774286,
+          40.56899538323094
+        ],
+        [
+          -73.86580807239548,
+          40.568964979146706
+        ],
+        [
+          -73.86611719772013,
+          40.568975293440076
+        ],
+        [
+          -73.86655327806383,
+          40.569056117541514
+        ],
+        [
+          -73.86694978449394,
+          40.56916757919317
+        ],
+        [
+          -73.86711676295694,
+          40.569256822686654
+        ],
+        [
+          -73.8673016333569,
+          40.56927497232339
+        ],
+        [
+          -73.86745010020806,
+          40.56926559745831
+        ],
+        [
+          -73.86768835009111,
+          40.569208116819226
+        ],
+        [
+          -73.86790852634817,
+          40.56908194508669
+        ],
+        [
+          -73.86796616227568,
+          40.56902996419552
+        ],
+        [
+          -73.86805879042126,
+          40.56890783525871
+        ],
+        [
+          -73.86808243824794,
+          40.5688207202486
+        ],
+        [
+          -73.86809514305304,
+          40.56872373900438
+        ],
+        [
+          -73.86821117355296,
+          40.56849487884798
+        ],
+        [
+          -73.86853474770807,
+          40.56807122067554
+        ],
+        [
+          -73.86871313184443,
+          40.56789490029503
+        ],
+        [
+          -73.86900769541843,
+          40.56769235560902
+        ],
+        [
+          -73.86907429976691,
+          40.56765948161448
+        ],
+        [
+          -73.86936942622556,
+          40.56751779993177
+        ],
+        [
+          -73.86983155880175,
+          40.56737722576225
+        ],
+        [
+          -73.87146106454512,
+          40.56682735257906
+        ],
+        [
+          -73.8718303079381,
+          40.56669755398069
+        ],
+        [
+          -73.87222017857941,
+          40.56655758930279
+        ],
+        [
+          -73.87278207201605,
+          40.56635709801139
+        ],
+        [
+          -73.8729735994003,
+          40.56631674116096
+        ],
+        [
+          -73.8730198322276,
+          40.56628845515437
+        ],
+        [
+          -73.87304943036615,
+          40.56627698979319
+        ],
+        [
+          -73.87307365727735,
+          40.56620294359845
+        ],
+        [
+          -73.87301630949328,
+          40.56614123040686
+        ],
+        [
+          -73.87288767379485,
+          40.566124660103405
+        ],
+        [
+          -73.8726784827733,
+          40.56619276371391
+        ],
+        [
+          -73.87247577758056,
+          40.56626268833418
+        ],
+        [
+          -73.87172880523269,
+          40.56651268119568
+        ],
+        [
+          -73.87140919331883,
+          40.566622579772606
+        ],
+        [
+          -73.86975898453599,
+          40.56719263462368
+        ],
+        [
+          -73.86835953322432,
+          40.56766248903475
+        ],
+        [
+          -73.8678013848521,
+          40.56788196295583
+        ],
+        [
+          -73.86713058794588,
+          40.56814219601522
+        ],
+        [
+          -73.8668963066821,
+          40.56822028951311
+        ],
+        [
+          -73.86674783482862,
+          40.56833449121012
+        ],
+        [
+          -73.8666709520933,
+          40.56841251002043
+        ],
+        [
+          -73.8666179777797,
+          40.56856761098266
+        ],
+        [
+          -73.86661867404118,
+          40.56873679067343
+        ],
+        [
+          -73.86663261336417,
+          40.56881985524345
+        ],
+        [
+          -73.86675531731301,
+          40.569011280733605
+        ],
+        [
+          -73.86685596750007,
+          40.56909435653147
+        ],
+        [
+          -73.86696052812555,
+          40.56917149605787
+        ],
+        [
+          -73.8671302644562,
+          40.569261374192536
+        ],
+        [
+          -73.86736529411765,
+          40.56941396396397
+        ],
+        [
+          -73.86754340031837,
+          40.5695695939882
+        ],
+        [
+          -73.8678062198752,
+          40.56989213695467
+        ],
+        [
+          -73.86791746251883,
+          40.57004339014187
+        ],
+        [
+          -73.86821542425412,
+          40.570451379974465
+        ],
+        [
+          -73.86856197435121,
+          40.570828441888295
+        ],
+        [
+          -73.86874459833516,
+          40.57099357044665
+        ],
+        [
+          -73.86898804488473,
+          40.57114040397046
+        ],
+        [
+          -73.86932198683945,
+          40.57130821986963
+        ],
+        [
+          -73.8696436247369,
+          40.57140617990024
+        ],
+        [
+          -73.8699352579038,
+          40.57145513526097
+        ],
+        [
+          -73.87041163335691,
+          40.571474972323394
+        ],
+        [
+          -73.8706460210979,
+          40.57147505812153
+        ],
+        [
+          -73.87098988229273,
+          40.57143562627159
+        ],
+        [
+          -73.8712585317089,
+          40.57136806203478
+        ],
+        [
+          -73.87222507537142,
+          40.57094919847581
+        ],
+        [
+          -73.8748244131517,
+          40.56969943955661
+        ],
+        [
+          -73.87665693239504,
+          40.56880856299135
+        ],
+        [
+          -73.87734547375577,
+          40.568626350035856
+        ],
+        [
+          -73.87759701025574,
+          40.568569066968514
+        ],
+        [
+          -73.87788069279492,
+          40.568505522365484
+        ],
+        [
+          -73.87843443843333,
+          40.568435156737216
+        ],
+        [
+          -73.87967430788387,
+          40.56833516634406
+        ],
+        [
+          -73.87986547037029,
+          40.568296350696606
+        ],
+        [
+          -73.88016896988928,
+          40.5682079320455
+        ],
+        [
+          -73.88113798103625,
+          40.567808229791346
+        ],
+        [
+          -73.8812613983667,
+          40.56776726651811
+        ],
+        [
+          -73.88144418829602,
+          40.56770661277922
+        ],
+        [
+          -73.88169825855987,
+          40.56764586141672
+        ],
+        [
+          -73.88199302583465,
+          40.56759527266697
+        ],
+        [
+          -73.8823732574054,
+          40.567565251849736
+        ],
+        [
+          -73.88275171572874,
+          40.567510503945556
+        ],
+        [
+          -73.88264020055516,
+          40.56746397498646
+        ],
+        [
+          -73.882430926874,
+          40.56709834860083
+        ]
+      ]
+    }
+  ]
+}
