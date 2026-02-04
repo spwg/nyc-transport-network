@@ -93,6 +93,16 @@ export function RouteDetailPanel() {
           <strong>Type:</strong>{' '}
           {selectedRoute.type.charAt(0).toUpperCase() + selectedRoute.type.slice(1)}
         </p>
+        {selectedRoute.peakHeadwayMinutes && (
+          <p>
+            <strong>Peak Frequency:</strong> Every {selectedRoute.peakHeadwayMinutes} min
+          </p>
+        )}
+        {selectedRoute.offPeakHeadwayMinutes && (
+          <p>
+            <strong>Off-Peak:</strong> Every {selectedRoute.offPeakHeadwayMinutes} min
+          </p>
+        )}
       </section>
 
       <section className="route-stations">

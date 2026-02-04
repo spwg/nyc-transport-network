@@ -4,6 +4,8 @@ import { SearchPanel } from '@/components/Panels/SearchPanel';
 import { StationDetailPanel } from '@/components/Panels/StationDetailPanel';
 import { RouteDetailPanel } from '@/components/Panels/RouteDetailPanel';
 import { Sidebar } from '@/components/UI/Sidebar';
+import { Legend } from '@/components/UI/Legend';
+import { HeatmapControls } from '@/components/UI/HeatmapControls';
 import './App.css';
 
 function App() {
@@ -16,9 +18,11 @@ function App() {
         <Sidebar>
           <SearchPanel />
           <SystemSelector />
+          <HeatmapControls />
         </Sidebar>
         <div className="map-container">
           <TransitMap />
+          <Legend />
         </div>
         <StationDetailPanel />
         <RouteDetailPanel />

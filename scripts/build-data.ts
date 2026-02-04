@@ -4,6 +4,7 @@ import * as path from 'path';
 import * as fs from 'fs';
 import { downloadMTAFeed, downloadFile, DATA_DIR, ensureDir } from './download/mta';
 import { parseGTFS, writeSystemData, SystemData } from './parse/gtfs-parser';
+import { downloadRidership, matchRidershipToStations } from './download/ridership';
 
 // Resolve paths relative to the project root (parent of scripts folder)
 const PROJECT_ROOT = path.join(__dirname, '..');
@@ -98,6 +99,29 @@ async function processSystem(system: SystemDefinition): Promise<SystemData | nul
     // Parse GTFS
     console.log(`Parsing ${system.id} GTFS...`);
     const data = await parseGTFS(zipPath, system.id);
+
+    // Enrich subway stations with ridership data
+    if (system.id === 'subway') {
+      try {
+        console.log('Enriching subway stations with ridership data...');
+        const ridershipData = await downloadRidership();
+        const matches = matchRidershipToStations(ridershipData, data.stations);
+        let enrichedCount = 0;
+        for (const station of data.stations) {
+          const ridership = matches.get(station.id);
+          if (ridership) {
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            (station as any).annualRidership = ridership.annualRidership;
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            (station as any).dailyRidership = ridership.dailyRidership;
+            enrichedCount++;
+          }
+        }
+        console.log(`Enriched ${enrichedCount} subway stations with ridership data`);
+      } catch (err) {
+        console.warn('Failed to enrich ridership data (non-fatal):', err);
+      }
+    }
 
     // Write output
     console.log(`Writing ${system.id} data...`);

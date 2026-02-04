@@ -116,11 +116,13 @@ nyc-transport-network/
 - Clickable route badges in station panel
 - Professional transit map improvements (see below)
 
-### Phase 4: Data Features (NOT STARTED)
-- Ridership data integration (from data.ny.gov)
-- Service frequency calculation (trains per hour from stop_times)
-- Heat map visualization option
-- Legend component
+### Phase 4: Data Features (COMPLETE)
+- Ridership data integration (from data.ny.gov Socrata API, matched to 462/496 subway stations)
+- Service frequency calculation (peak/off-peak headway computed from GTFS stop_times)
+- Heat map visualization (deck.gl HeatmapLayer with ridership + frequency modes)
+- Legend component (floating card with system colors + heatmap gradient scale)
+- Heatmap controls (sidebar toggle, metric selector, opacity slider)
+- Frequency/ridership data displayed in station and route detail panels
 
 ### Future (Post-MVP)
 - Construction history timeline

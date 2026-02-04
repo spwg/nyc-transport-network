@@ -20,6 +20,8 @@ export interface Route {
   textColor: string;
   type: TransitSystemType;
   stationOrder?: string[];
+  peakHeadwayMinutes?: number;
+  offPeakHeadwayMinutes?: number;
 }
 
 export interface Station {
@@ -35,6 +37,8 @@ export interface Station {
     ada: boolean;
     elevator: boolean;
   };
+  annualRidership?: number;
+  dailyRidership?: number;
 }
 
 export interface Transfer {

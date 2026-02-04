@@ -48,7 +48,9 @@
         "metro-north:145",
         "metro-north:190",
         "metro-north:149"
-      ]
+      ],
+      "peakHeadwayMinutes": 2,
+      "offPeakHeadwayMinutes": 3
     },
     {
       "id": "metro-north:4",
@@ -79,7 +81,9 @@
         "metro-north:154",
         "metro-north:155",
         "metro-north:157"
-      ]
+      ],
+      "peakHeadwayMinutes": 16,
+      "offPeakHeadwayMinutes": 24
     },
     {
       "id": "metro-north:5",
@@ -105,7 +109,9 @@
         "metro-north:163",
         "metro-north:164",
         "metro-north:165"
-      ]
+      ],
+      "peakHeadwayMinutes": 19,
+      "offPeakHeadwayMinutes": 42
     },
     {
       "id": "metro-north:6",
@@ -124,7 +130,9 @@
         "metro-north:170",
         "metro-north:171",
         "metro-north:172"
-      ]
+      ],
+      "peakHeadwayMinutes": 24,
+      "offPeakHeadwayMinutes": 42
     },
     {
       "id": "metro-north:1",
@@ -157,7 +165,9 @@
         "metro-north:30",
         "metro-north:31",
         "metro-north:33"
-      ]
+      ],
+      "peakHeadwayMinutes": 3,
+      "offPeakHeadwayMinutes": 4
     },
     {
       "id": "metro-north:2",
@@ -198,7 +208,9 @@
         "metro-north:90",
         "metro-north:91",
         "metro-north:94"
-      ]
+      ],
+      "peakHeadwayMinutes": 2,
+      "offPeakHeadwayMinutes": 3
     }
   ],
   "stations": [

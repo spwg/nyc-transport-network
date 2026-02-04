@@ -12,6 +12,7 @@
     "data:build": "cd scripts && npx ts-node --project tsconfig.json build-data.ts"
   },
   "dependencies": {
+    "@deck.gl/aggregation-layers": "^9.2.6",
     "@deck.gl/core": "^9.2.6",
     "@deck.gl/layers": "^9.2.6",
     "@deck.gl/react": "^9.2.6",

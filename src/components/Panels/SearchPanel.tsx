@@ -18,7 +18,7 @@ export function SearchPanel() {
   const fuse = useMemo(() => {
     return new Fuse(stations, {
       keys: ['name'],
-      threshold: 0.3,
+      threshold: 0.4,
       includeScore: true,
     });
   }, [stations]);
@@ -69,14 +69,15 @@ export function SearchPanel() {
     [isOpen, results, selectedIndex, handleSelect]
   );
 
-  useEffect(() => {
-    if (query.trim()) {
+  const handleQueryChange = useCallback((value: string) => {
+    setQuery(value);
+    if (value.trim()) {
       setIsOpen(true);
       setSelectedIndex(0);
     } else {
       setIsOpen(false);
     }
-  }, [query]);
+  }, []);
 
   useEffect(() => {
     if (listRef.current && isOpen) {
@@ -107,7 +108,7 @@ export function SearchPanel() {
           className="search-input"
           placeholder="Search stations..."
           value={query}
-          onChange={(e) => setQuery(e.target.value)}
+          onChange={(e) => handleQueryChange(e.target.value)}
           onKeyDown={handleKeyDown}
           onFocus={() => query.trim() && setIsOpen(true)}
           onBlur={() => setTimeout(() => setIsOpen(false), 150)}
@@ -116,7 +117,7 @@ export function SearchPanel() {
           <button
             className="search-clear"
             onClick={() => {
-              setQuery('');
+              handleQueryChange('');
               inputRef.current?.focus();
             }}
             aria-label="Clear search"

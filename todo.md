@@ -39,11 +39,13 @@
 - [x] Parallel line offsets for overlapping routes
 - [x] Multi-branch geometry support (Penn + Atlantic Terminal)
 
-## Phase 4: Data Features (NOT STARTED)
-- [ ] Ridership data integration
-- [ ] Service frequency calculation
-- [ ] Heat map visualization option
-- [ ] Legend component
+## Phase 4: Data Features (COMPLETE)
+- [x] Legend component (floating card, shows active systems + heatmap scale)
+- [x] Service frequency calculation (peak/off-peak headway from GTFS stop_times)
+- [x] Ridership data integration (MTA data.ny.gov Socrata API, 462 stations matched)
+- [x] Heat map visualization (deck.gl HeatmapLayer, ridership + frequency modes)
+- [x] Heatmap controls in sidebar (toggle, metric selector, opacity slider)
+- [x] Display frequency + ridership in station/route detail panels
 
 ## Documentation
 - [x] Create spec.md (user-facing functionality)

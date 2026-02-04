@@ -51,6 +51,30 @@ export function StationDetailPanel() {
         </div>
       </section>
 
+      {(selectedStation.dailyRidership || servingRoutes.some(r => r.peakHeadwayMinutes)) && (
+        <section>
+          <h3>Service Data</h3>
+          <ul className="data-list">
+            {selectedStation.dailyRidership && (
+              <li>
+                Daily Ridership:{' '}
+                <strong>~{selectedStation.dailyRidership.toLocaleString()}</strong>
+              </li>
+            )}
+            {(() => {
+              const peakRoutes = servingRoutes.filter(r => r.peakHeadwayMinutes && r.peakHeadwayMinutes > 0);
+              if (peakRoutes.length === 0) return null;
+              const bestHeadway = Math.min(...peakRoutes.map(r => r.peakHeadwayMinutes!));
+              return (
+                <li>
+                  Peak Service: <strong>Every {bestHeadway} min</strong>
+                </li>
+              );
+            })()}
+          </ul>
+        </section>
+      )}
+
       {selectedStation.isTransferPoint && (
         <section>
           <h3>Transfer Station</h3>

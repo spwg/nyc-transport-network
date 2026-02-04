@@ -26,7 +26,9 @@
         "nj-transit-rail:28",
         "nj-transit-rail:43298",
         "nj-transit-rail:1"
-      ]
+      ],
+      "peakHeadwayMinutes": 20,
+      "offPeakHeadwayMinutes": 19
     },
     {
       "id": "nj-transit-rail:2",
@@ -63,7 +65,9 @@
         "nj-transit-rail:154",
         "nj-transit-rail:106",
         "nj-transit-rail:63"
-      ]
+      ],
+      "peakHeadwayMinutes": 30,
+      "offPeakHeadwayMinutes": 30
     },
     {
       "id": "nj-transit-rail:3",
@@ -87,7 +91,9 @@
         "nj-transit-rail:106",
         "nj-transit-rail:38187",
         "nj-transit-rail:105"
-      ]
+      ],
+      "peakHeadwayMinutes": 4,
+      "offPeakHeadwayMinutes": 15
     },
     {
       "id": "nj-transit-rail:4",
@@ -115,7 +121,9 @@
         "nj-transit-rail:9878",
         "nj-transit-rail:38578",
         "nj-transit-rail:38579"
-      ]
+      ],
+      "peakHeadwayMinutes": 1,
+      "offPeakHeadwayMinutes": 2
     },
     {
       "id": "nj-transit-rail:5",
@@ -143,7 +151,9 @@
         "nj-transit-rail:134",
         "nj-transit-rail:38174",
         "nj-transit-rail:63"
-      ]
+      ],
+      "peakHeadwayMinutes": 4,
+      "offPeakHeadwayMinutes": 7
     },
     {
       "id": "nj-transit-rail:6",
@@ -179,7 +189,9 @@
         "nj-transit-rail:75",
         "nj-transit-rail:38174",
         "nj-transit-rail:63"
-      ]
+      ],
+      "peakHeadwayMinutes": 28,
+      "offPeakHeadwayMinutes": 22
     },
     {
       "id": "nj-transit-rail:7",
@@ -215,7 +227,9 @@
         "nj-transit-rail:37",
         "nj-transit-rail:106",
         "nj-transit-rail:63"
-      ]
+      ],
+      "peakHeadwayMinutes": 3,
+      "offPeakHeadwayMinutes": 6
     },
     {
       "id": "nj-transit-rail:8",
@@ -250,7 +264,9 @@
         "nj-transit-rail:37",
         "nj-transit-rail:106",
         "nj-transit-rail:63"
-      ]
+      ],
+      "peakHeadwayMinutes": 6,
+      "offPeakHeadwayMinutes": 8
     },
     {
       "id": "nj-transit-rail:9",
@@ -277,7 +293,9 @@
         "nj-transit-rail:125",
         "nj-transit-rail:32905",
         "nj-transit-rail:148"
-      ]
+      ],
+      "peakHeadwayMinutes": 2,
+      "offPeakHeadwayMinutes": 3
     },
     {
       "id": "nj-transit-rail:10",
@@ -309,7 +327,9 @@
         "nj-transit-rail:107",
         "nj-transit-rail:38187",
         "nj-transit-rail:105"
-      ]
+      ],
+      "peakHeadwayMinutes": 3,
+      "offPeakHeadwayMinutes": 5
     },
     {
       "id": "nj-transit-rail:11",
@@ -343,7 +363,9 @@
         "nj-transit-rail:79",
         "nj-transit-rail:122",
         "nj-transit-rail:13"
-      ]
+      ],
+      "peakHeadwayMinutes": 12,
+      "offPeakHeadwayMinutes": 11
     },
     {
       "id": "nj-transit-rail:12",
@@ -371,7 +393,9 @@
         "nj-transit-rail:39133",
         "nj-transit-rail:39131",
         "nj-transit-rail:39130"
-      ]
+      ],
+      "peakHeadwayMinutes": 2,
+      "offPeakHeadwayMinutes": 2
     },
     {
       "id": "nj-transit-rail:13",
@@ -400,7 +424,9 @@
         "nj-transit-rail:160",
         "nj-transit-rail:38174",
         "nj-transit-rail:63"
-      ]
+      ],
+      "peakHeadwayMinutes": 15,
+      "offPeakHeadwayMinutes": 19
     },
     {
       "id": "nj-transit-rail:14",
@@ -413,7 +439,9 @@
       "stationOrder": [
         "nj-transit-rail:124",
         "nj-transit-rail:125"
-      ]
+      ],
+      "peakHeadwayMinutes": 4,
+      "offPeakHeadwayMinutes": 4
     },
     {
       "id": "nj-transit-rail:15",
@@ -445,7 +473,9 @@
         "nj-transit-rail:107",
         "nj-transit-rail:38187",
         "nj-transit-rail:105"
-      ]
+      ],
+      "peakHeadwayMinutes": 4,
+      "offPeakHeadwayMinutes": 11
     },
     {
       "id": "nj-transit-rail:16",
@@ -477,7 +507,9 @@
         "nj-transit-rail:38308",
         "nj-transit-rail:38309",
         "nj-transit-rail:38310"
-      ]
+      ],
+      "peakHeadwayMinutes": 5,
+      "offPeakHeadwayMinutes": 6
     }
   ],
   "stations": [

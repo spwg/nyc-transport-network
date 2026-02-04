@@ -33,6 +33,16 @@ interface MapState {
   showTransfers: boolean;
   toggleTransfers: () => void;
 
+  showLegend: boolean;
+  toggleLegend: () => void;
+
+  showHeatmap: boolean;
+  toggleHeatmap: () => void;
+  heatmapMetric: 'ridership' | 'frequency';
+  setHeatmapMetric: (metric: 'ridership' | 'frequency') => void;
+  heatmapOpacity: number;
+  setHeatmapOpacity: (opacity: number) => void;
+
   zoomToRoute: (coordinates: [number, number][]) => void;
   zoomToStation: (station: Station) => void;
 }
@@ -82,6 +92,16 @@ export const useMapStore = create<MapState>((set) => ({
 
   showTransfers: true,
   toggleTransfers: () => set((state) => ({ showTransfers: !state.showTransfers })),
+
+  showLegend: true,
+  toggleLegend: () => set((state) => ({ showLegend: !state.showLegend })),
+
+  showHeatmap: false,
+  toggleHeatmap: () => set((state) => ({ showHeatmap: !state.showHeatmap })),
+  heatmapMetric: 'ridership',
+  setHeatmapMetric: (metric) => set({ heatmapMetric: metric }),
+  heatmapOpacity: 0.6,
+  setHeatmapOpacity: (opacity) => set({ heatmapOpacity: Math.max(0, Math.min(1, opacity)) }),
 
   zoomToRoute: (coordinates) =>
     set((state) => {

@@ -2,13 +2,14 @@ import { useCallback, useMemo } from 'react';
 import { Map as MapGL } from 'react-map-gl/maplibre';
 import { DeckGL } from '@deck.gl/react';
 import { PathLayer, ScatterplotLayer } from '@deck.gl/layers';
-import type { PickingInfo } from '@deck.gl/core';
+import { HeatmapLayer } from '@deck.gl/aggregation-layers';
+import type { PickingInfo, Layer } from '@deck.gl/core';
 import 'maplibre-gl/dist/maplibre-gl.css';
 
 import { useMapStore } from '@/stores/mapStore';
 import { useTransitData } from '@/hooks/useTransitData';
 import { MAP_STYLE, SUBWAY_LINE_COLORS } from '@/constants/systems';
-import type { Station, RouteGeometry } from '@/types/transit';
+import type { Station, Route, RouteGeometry } from '@/types/transit';
 
 function hexToRgb(hex: string): [number, number, number] {
   const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
@@ -38,6 +39,9 @@ export function TransitMap() {
     selectedRoute,
     hoveredRouteId,
     setHoveredRoute,
+    showHeatmap,
+    heatmapMetric,
+    heatmapOpacity,
   } = useMapStore();
   const { routes, stations, routeGeometries, loading } = useTransitData();
 
@@ -87,6 +91,32 @@ export function TransitMap() {
     [setHoveredRoute]
   );
 
+  // Build a map from routeId to Route for quick lookup
+  const routeMap = useMemo(() => {
+    const map = new Map<string, Route>();
+    routes.forEach((r) => map.set(r.id, r));
+    return map;
+  }, [routes]);
+
+  // Compute station-level frequency (trains per hour at peak)
+  const stationFrequencyMap = useMemo(() => {
+    const map = new Map<string, number>();
+    for (const station of stations) {
+      let minHeadway = Infinity;
+      for (const routeId of station.routeIds) {
+        const route = routeMap.get(routeId);
+        if (route?.peakHeadwayMinutes && route.peakHeadwayMinutes > 0) {
+          minHeadway = Math.min(minHeadway, route.peakHeadwayMinutes);
+        }
+      }
+      if (minHeadway < Infinity) {
+        // Trains per hour based on best-frequency route
+        map.set(station.id, 60 / minHeadway);
+      }
+    }
+    return map;
+  }, [stations, routeMap]);
+
   const layers = useMemo(() => {
     if (loading || routeGeometries.length === 0) {
       return [];
@@ -97,7 +127,7 @@ export function TransitMap() {
       (a, b) => hashRouteId(a.routeId) - hashRouteId(b.routeId)
     );
 
-    return [
+    const allLayers: Layer[] = [
       // Hit area layer - wide invisible layer for better click/hover detection at all zoom levels
       new PathLayer<RouteGeometry>({
         id: 'routes-hitarea',
@@ -216,15 +246,58 @@ export function TransitMap() {
         },
       }),
     ];
+
+    // Add heatmap layer if enabled
+    if (showHeatmap) {
+      const heatmapData = stations
+        .map((s) => {
+          let weight = 0;
+          if (heatmapMetric === 'ridership') {
+            weight = s.dailyRidership ?? 0;
+          } else {
+            weight = stationFrequencyMap.get(s.id) ?? 0;
+          }
+          return weight > 0 ? { position: [s.longitude, s.latitude] as [number, number], weight } : null;
+        })
+        .filter((d): d is NonNullable<typeof d> => d !== null);
+
+      // Insert heatmap before all other layers so it appears underneath
+      allLayers.unshift(
+        new HeatmapLayer({
+          id: 'heatmap',
+          data: heatmapData,
+          getPosition: (d: { position: [number, number]; weight: number }) => d.position,
+          getWeight: (d: { position: [number, number]; weight: number }) => d.weight,
+          radiusPixels: 40,
+          intensity: 1,
+          threshold: 0.05,
+          colorRange: [
+            [255, 255, 178],
+            [254, 204, 92],
+            [253, 141, 60],
+            [240, 59, 32],
+            [189, 0, 38],
+          ],
+          opacity: heatmapOpacity,
+          aggregation: 'SUM',
+        }),
+      );
+    }
+
+    return allLayers;
   }, [
     loading,
     routeGeometries,
     stations,
     routes,
     routeColorMap,
+    stationFrequencyMap,
     hoveredStationId,
     selectedRouteId,
     hoveredRouteId,
+    showHeatmap,
+    heatmapMetric,
+    heatmapOpacity,
     handleRouteClick,
     handleRouteHover,
     handleStationClick,

@@ -26,7 +26,9 @@
         "path:781729",
         "path:781727",
         "path:781724"
-      ]
+      ],
+      "peakHeadwayMinutes": 3,
+      "offPeakHeadwayMinutes": 3
     },
     {
       "id": "path:BLU",
@@ -43,7 +45,9 @@
         "path:781735",
         "path:781733",
         "path:781743"
-      ]
+      ],
+      "peakHeadwayMinutes": 4,
+      "offPeakHeadwayMinutes": 3
     },
     {
       "id": "path:GRE",
@@ -58,7 +62,9 @@
         "path:781729",
         "path:781730",
         "path:781747"
-      ]
+      ],
+      "peakHeadwayMinutes": 8,
+      "offPeakHeadwayMinutes": 6
     },
     {
       "id": "path:RED",
@@ -75,7 +81,9 @@
         "path:781726",
         "path:781730",
         "path:781750"
-      ]
+      ],
+      "peakHeadwayMinutes": 1,
+      "offPeakHeadwayMinutes": 5
     },
     {
       "id": "path:YEL",
@@ -94,7 +102,9 @@
         "path:781729",
         "path:781727",
         "path:781724"
-      ]
+      ],
+      "peakHeadwayMinutes": 2,
+      "offPeakHeadwayMinutes": 5
     },
     {
       "id": "path:Special6",
@@ -115,7 +125,9 @@
         "path:781730",
         "path:781727",
         "path:781724"
-      ]
+      ],
+      "peakHeadwayMinutes": 20,
+      "offPeakHeadwayMinutes": 20
     }
   ],
   "stations": [

@@ -24,6 +24,8 @@ interface Route {
   textColor: string;
   type: TransitSystemType;
   stationOrder?: string[];
+  peakHeadwayMinutes?: number;
+  offPeakHeadwayMinutes?: number;
 }
 
 interface Station {
@@ -345,6 +347,8 @@ interface GTFSStopTime {
   trip_id: string;
   stop_id: string;
   stop_sequence?: string;
+  departure_time?: string;
+  arrival_time?: string;
 }
 
 async function extractGTFS(zipPath: string): Promise<Map<string, string>> {
@@ -369,6 +373,96 @@ function parseCSV<T>(content: string): T[] {
     skip_empty_lines: true,
     relax_column_count: true,
   }) as T[];
+}
+
+// Parse a GTFS time string (HH:MM:SS) to minutes since midnight
+// GTFS times can exceed 24:00:00 for trips past midnight
+function parseGTFSTime(timeStr: string): number | null {
+  if (!timeStr || !timeStr.trim()) return null;
+  const parts = timeStr.trim().split(':');
+  if (parts.length < 2) return null;
+  const hours = parseInt(parts[0], 10);
+  const minutes = parseInt(parts[1], 10);
+  if (isNaN(hours) || isNaN(minutes)) return null;
+  return hours * 60 + minutes;
+}
+
+// Calculate service frequency (headway) for each route
+function calculateServiceFrequency(
+  gtfsStopTimes: GTFSStopTime[],
+  gtfsTrips: GTFSTrip[],
+): Map<string, { peakHeadway: number; offPeakHeadway: number }> {
+  // Build trip -> route mapping
+  const tripRouteMap = new Map<string, string>();
+  gtfsTrips.forEach((trip) => tripRouteMap.set(trip.trip_id, trip.route_id));
+
+  // Collect departure times per route per stop
+  // Key: "routeId|stopId", Value: array of minutes since midnight
+  const routeStopDepartures = new Map<string, number[]>();
+
+  for (const st of gtfsStopTimes) {
+    const routeId = tripRouteMap.get(st.trip_id);
+    const time = parseGTFSTime(st.departure_time || st.arrival_time || '');
+    if (!routeId || time === null) continue;
+
+    const key = `${routeId}|${st.stop_id}`;
+    if (!routeStopDepartures.has(key)) {
+      routeStopDepartures.set(key, []);
+    }
+    routeStopDepartures.get(key)!.push(time);
+  }
+
+  // For each route, find the stop with the most departures (representative stop)
+  const routeBestStop = new Map<string, { stopKey: string; count: number }>();
+  routeStopDepartures.forEach((times, key) => {
+    const routeId = key.split('|')[0];
+    const current = routeBestStop.get(routeId);
+    if (!current || times.length > current.count) {
+      routeBestStop.set(routeId, { stopKey: key, count: times.length });
+    }
+  });
+
+  // Calculate headway for each route using its busiest stop
+  const result = new Map<string, { peakHeadway: number; offPeakHeadway: number }>();
+
+  routeBestStop.forEach(({ stopKey }, routeId) => {
+    const departures = routeStopDepartures.get(stopKey)!;
+    departures.sort((a, b) => a - b);
+
+    // Peak: 7:00-9:00 (420-540) and 17:00-19:00 (1020-1140)
+    const peakDeps = departures.filter(
+      (t) => (t >= 420 && t < 540) || (t >= 1020 && t < 1140)
+    );
+    // Off-peak: 10:00-16:00 (600-960)
+    const offPeakDeps = departures.filter((t) => t >= 600 && t < 960);
+
+    const calcMedianHeadway = (times: number[]): number | null => {
+      if (times.length < 2) return null;
+      const gaps: number[] = [];
+      for (let i = 1; i < times.length; i++) {
+        const gap = times[i] - times[i - 1];
+        if (gap > 0 && gap < 120) { // Ignore gaps > 2 hours (likely different service periods)
+          gaps.push(gap);
+        }
+      }
+      if (gaps.length === 0) return null;
+      gaps.sort((a, b) => a - b);
+      return gaps[Math.floor(gaps.length / 2)];
+    };
+
+    const peakHeadway = calcMedianHeadway(peakDeps);
+    const offPeakHeadway = calcMedianHeadway(offPeakDeps);
+
+    // Only include if we have at least one valid headway
+    if (peakHeadway !== null || offPeakHeadway !== null) {
+      result.set(routeId, {
+        peakHeadway: peakHeadway ?? offPeakHeadway ?? 0,
+        offPeakHeadway: offPeakHeadway ?? peakHeadway ?? 0,
+      });
+    }
+  });
+
+  return result;
 }
 
 export async function parseGTFS(gtfsPath: string, systemId: string): Promise<SystemData> {
@@ -576,6 +670,20 @@ export async function parseGTFS(gtfsPath: string, systemId: string): Promise<Sys
   });
 
   console.log(`Built station ordering for ${routeStationOrder.size} routes`);
+
+  // Calculate service frequency
+  const frequencyData = calculateServiceFrequency(gtfsStopTimes, gtfsTrips);
+  let frequencyCount = 0;
+  routes.forEach((route) => {
+    const rawRouteId = route.id.replace(`${systemId}:`, '');
+    const freq = frequencyData.get(rawRouteId);
+    if (freq) {
+      route.peakHeadwayMinutes = Math.round(freq.peakHeadway);
+      route.offPeakHeadwayMinutes = Math.round(freq.offPeakHeadway);
+      frequencyCount++;
+    }
+  });
+  console.log(`Calculated frequency for ${frequencyCount} routes`);
 
   // Group shapes by shape_id and build route geometries
   const shapeMap = new Map<string, Array<{ lat: number; lon: number; seq: number }>>();

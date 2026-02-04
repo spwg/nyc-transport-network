@@ -35,7 +35,9 @@
         "lirr:38",
         "lirr:117",
         "lirr:27"
-      ]
+      ],
+      "peakHeadwayMinutes": 3,
+      "offPeakHeadwayMinutes": 5
     },
     {
       "id": "lirr:2",
@@ -61,7 +63,9 @@
         "lirr:107",
         "lirr:55",
         "lirr:349"
-      ]
+      ],
+      "peakHeadwayMinutes": 7,
+      "offPeakHeadwayMinutes": 12
     },
     {
       "id": "lirr:3",
@@ -86,7 +90,9 @@
         "lirr:102",
         "lirr:90",
         "lirr:118"
-      ]
+      ],
+      "peakHeadwayMinutes": 22,
+      "offPeakHeadwayMinutes": 21
     },
     {
       "id": "lirr:4",
@@ -113,7 +119,9 @@
         "lirr:29",
         "lirr:33",
         "lirr:179"
-      ]
+      ],
+      "peakHeadwayMinutes": 5,
+      "offPeakHeadwayMinutes": 5
     },
     {
       "id": "lirr:5",
@@ -142,7 +150,9 @@
         "lirr:48",
         "lirr:4",
         "lirr:141"
-      ]
+      ],
+      "peakHeadwayMinutes": 13,
+      "offPeakHeadwayMinutes": 11
     },
     {
       "id": "lirr:6",
@@ -168,7 +178,9 @@
         "lirr:55",
         "lirr:214",
         "lirr:237"
-      ]
+      ],
+      "peakHeadwayMinutes": 9,
+      "offPeakHeadwayMinutes": 7
     },
     {
       "id": "lirr:7",
@@ -195,7 +207,9 @@
         "lirr:55",
         "lirr:214",
         "lirr:237"
-      ]
+      ],
+      "peakHeadwayMinutes": 9,
+      "offPeakHeadwayMinutes": 13
     },
     {
       "id": "lirr:8",
@@ -216,7 +230,9 @@
         "lirr:124",
         "lirr:85",
         "lirr:216"
-      ]
+      ],
+      "peakHeadwayMinutes": 12,
+      "offPeakHeadwayMinutes": 13
     },
     {
       "id": "lirr:9",
@@ -241,7 +257,9 @@
         "lirr:131",
         "lirr:162",
         "lirr:171"
-      ]
+      ],
+      "peakHeadwayMinutes": 4,
+      "offPeakHeadwayMinutes": 7
     },
     {
       "id": "lirr:10",
@@ -270,7 +288,9 @@
         "lirr:107",
         "lirr:55",
         "lirr:237"
-      ]
+      ],
+      "peakHeadwayMinutes": 5,
+      "offPeakHeadwayMinutes": 4
     },
     {
       "id": "lirr:11",
@@ -295,7 +315,9 @@
         "lirr:55",
         "lirr:107",
         "lirr:102"
-      ]
+      ],
+      "peakHeadwayMinutes": 3,
+      "offPeakHeadwayMinutes": 9
     },
     {
       "id": "lirr:13",
@@ -313,7 +335,9 @@
         "lirr:223",
         "lirr:129",
         "lirr:179"
-      ]
+      ],
+      "peakHeadwayMinutes": 11,
+      "offPeakHeadwayMinutes": 34
     }
   ],
   "stations": [

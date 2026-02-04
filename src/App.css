@@ -326,6 +326,16 @@ html, body, #root {
   margin-bottom: 4px;
 }
 
+.data-list {
+  list-style: none;
+  font-size: 0.875rem;
+  color: #333;
+}
+
+.data-list li {
+  margin-bottom: 4px;
+}
+
 .station-coords {
   color: #999;
   font-family: monospace;
@@ -479,6 +489,179 @@ html, body, #root {
 
 .zoom-button:hover {
   background: #2d2d4a;
+}
+
+/* Heatmap Controls */
+.heatmap-controls {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.heatmap-controls h3 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.heatmap-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  padding: 4px 0;
+  font-size: 0.875rem;
+  color: #333;
+}
+
+.heatmap-toggle input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.heatmap-options {
+  margin-top: 10px;
+  padding-left: 4px;
+}
+
+.heatmap-metric {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.heatmap-metric label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  font-size: 0.8125rem;
+  color: #555;
+}
+
+.heatmap-metric input[type="radio"] {
+  cursor: pointer;
+}
+
+.heatmap-opacity {
+  font-size: 0.8125rem;
+  color: #555;
+}
+
+.heatmap-opacity label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.heatmap-opacity input[type="range"] {
+  flex: 1;
+  height: 4px;
+  cursor: pointer;
+}
+
+/* Legend */
+.legend {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  z-index: 15;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  min-width: 160px;
+  overflow: hidden;
+}
+
+.legend-toggle {
+  width: 100%;
+  padding: 8px 12px;
+  background: #f8f9fa;
+  border: none;
+  border-bottom: 1px solid #e0e0e0;
+  cursor: pointer;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-align: left;
+}
+
+.legend-toggle:hover {
+  background: #eee;
+}
+
+.legend-content {
+  padding: 8px 0;
+}
+
+.legend-section {
+  padding: 6px 12px;
+}
+
+.legend-section + .legend-section {
+  border-top: 1px solid #f0f0f0;
+  margin-top: 4px;
+  padding-top: 10px;
+}
+
+.legend-section h4 {
+  font-size: 0.625rem;
+  font-weight: 600;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 3px 0;
+}
+
+.legend-swatch {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+.legend-label {
+  font-size: 0.8125rem;
+  color: #333;
+}
+
+.legend-empty {
+  font-size: 0.8125rem;
+  color: #999;
+  font-style: italic;
+}
+
+.legend-gradient {
+  display: flex;
+  height: 12px;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.legend-gradient-stop {
+  flex: 1;
+}
+
+.legend-gradient-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4px;
+  font-size: 0.625rem;
+  color: #999;
 }
 
 /* Loading state */
