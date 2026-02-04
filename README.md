@@ -1,14 +1,37 @@
 # NYC Transit Network Explorer
 
-An interactive web application for exploring the New York City metropolitan transit network. Visualize subway lines, commuter rail, ferries, and regional transit systems on a single interactive map.
+An interactive web application for exploring the New York City metropolitan transit network. Visualize subway lines, commuter rail, ferries, and regional transit systems on a single interactive map with ridership data and service frequency overlays.
+
+![Map overview showing multiple transit systems with heatmap overlay](docs/map-overview.png)
 
 ## Features
 
-- Interactive map with pan, zoom, and rotate controls
-- Toggle transit systems on/off (Subway, LIRR, Metro-North, PATH, NJ Transit, NYC Ferry)
-- Click stations to view details (routes served, accessibility info)
-- Hover tooltips for routes and stations
-- Official transit agency color schemes
+- **Interactive map** with pan, zoom, and rotate controls (deck.gl + MapLibre)
+- **6 transit systems**: Subway, LIRR, Metro-North, PATH, NJ Transit Rail, NYC Ferry
+- **Station details**: click any station to see routes served, daily ridership, peak service frequency, and transfer connections
+- **Route details**: view stations in travel order, peak/off-peak frequency, and zoom-to-route
+- **Ridership heatmap**: visualize daily ridership or service frequency as a heat overlay
+- **Fuzzy search**: find stations by name with autocomplete and keyboard navigation
+- **Legend**: floating card showing active systems and heatmap gradient scale
+- Official transit agency color schemes with parallel line offsets for overlapping routes
+
+### Station Detail Panel
+
+Click any station to see routes, ridership data, and service frequency.
+
+![Station detail panel showing Times Square with ridership and frequency data](docs/station-detail.png)
+
+### Route Detail Panel
+
+Click a route badge or line on the map to see all stations in travel order with frequency info.
+
+![Route detail panel showing the 2 train with station list and frequency](docs/route-detail.png)
+
+### Ridership Heatmap
+
+Toggle the heatmap overlay to visualize daily ridership or service frequency across the network.
+
+![Ridership heatmap overlay on the subway network](docs/heatmap-ridership.png)
 
 **Documentation:**
 - [spec.md](./spec.md) - Detailed functionality specification
@@ -60,8 +83,8 @@ nyc-transport-network/
 
 | Directory | Purpose |
 |-----------|---------|
-| `src/components/Map/` | Deck.gl + MapLibre map rendering, route and station layers |
-| `src/components/Panels/` | Station detail panel, system toggle selector |
+| `src/components/Map/` | Deck.gl + MapLibre map rendering, route/station/heatmap layers |
+| `src/components/Panels/` | Station detail, route detail, search, and system selector panels |
 | `src/constants/systems.ts` | Transit system definitions and line colors |
 | `src/stores/mapStore.ts` | Zustand store for map state, selections, enabled systems |
 | `src/hooks/useTransitData.ts` | Hook for loading and caching transit data |
@@ -72,10 +95,11 @@ nyc-transport-network/
 ## Technology Stack
 
 - **Frontend**: React 18, TypeScript, Vite
-- **Mapping**: MapLibre GL JS, Deck.gl
+- **Mapping**: MapLibre GL JS, deck.gl (PathLayer, ScatterplotLayer, HeatmapLayer)
 - **State Management**: Zustand
-- **Data Format**: GTFS (General Transit Feed Specification)
-- **Styling**: CSS-in-JS (inline styles)
+- **Search**: Fuse.js (fuzzy matching)
+- **Data Sources**: GTFS feeds, MTA Socrata API (ridership)
+- **Styling**: CSS
 
 ## Available Scripts
 
@@ -161,7 +185,7 @@ The new system will automatically appear in the System Selector sidebar.
 The data pipeline transforms GTFS feeds into optimized JSON for the frontend:
 
 ```
-GTFS Zip (routes.txt, stops.txt, shapes.txt, ...)
+GTFS Zip (routes.txt, stops.txt, shapes.txt, stop_times.txt, ...)
     ↓
 Download (scripts/download/*.ts or inline in build-data.ts)
     ↓
@@ -169,7 +193,12 @@ Parse (scripts/parse/gtfs-parser.ts)
     ├── Extract routes with colors
     ├── Extract stations (parent stations for rail)
     ├── Build route geometries from shapes
-    └── Map routes to stations
+    ├── Map routes to stations with travel order
+    ├── Calculate peak/off-peak service frequency
+    └── Compute parallel line offsets
+    ↓
+Enrich (subway only)
+    └── Match MTA ridership data from Socrata API (data.ny.gov)
     ↓
 Output JSON (public/data/systems/{system-id}.json)
 ```
@@ -193,7 +222,10 @@ Each system JSON file contains:
     shortName: string,    // "A", "NEC", etc.
     longName: string,     // Full route name
     color: string,        // Hex color
-    textColor: string     // Text color for badges
+    textColor: string,    // Text color for badges
+    stationOrder?: string[],        // Station IDs in travel order
+    peakHeadwayMinutes?: number,    // Peak service frequency
+    offPeakHeadwayMinutes?: number  // Off-peak service frequency
   }>,
   stations: Array<{
     id: string,           // "{systemId}:{stopId}"
@@ -202,7 +234,9 @@ Each system JSON file contains:
     longitude: number,
     routeIds: string[],   // Routes serving this station
     isTransferPoint: boolean,
-    accessibility?: { ada: boolean, elevator: boolean }
+    accessibility?: { ada: boolean, elevator: boolean },
+    annualRidership?: number,  // From MTA Socrata API (subway only)
+    dailyRidership?: number    // Derived from annual
   }>,
   routeGeometries: Array<{
     routeId: string,
@@ -215,11 +249,11 @@ Each system JSON file contains:
 
 | System | Routes | Stations | Data Source |
 |--------|--------|----------|-------------|
-| NYC Subway | 36 | 496 | MTA GTFS |
-| Long Island Rail Road | 11 | 124 | MTA GTFS |
-| Metro-North | 8 | 123 | MTA GTFS |
-| PATH | 4 | 13 | Port Authority GTFS |
-| NYC Ferry | 9 | 35 | NYC Ferry GTFS |
+| NYC Subway | 29 | 496 | MTA GTFS + Socrata ridership |
+| Long Island Rail Road | 13 | 127 | MTA GTFS |
+| Metro-North | 6 | 114 | MTA GTFS |
+| PATH | 6 | 43 | Port Authority GTFS |
+| NYC Ferry | 8 | 50 | NYC Ferry GTFS |
 | NJ Transit Rail | 16 | 227 | NJ Transit GTFS |
 
 ## License
